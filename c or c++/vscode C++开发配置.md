@@ -42,7 +42,7 @@
 ```
 上面的配置文件定义了一个名为“C/C++: clang++ 生成活动文件”的任务，它使用 "/usr/bin/clang++" 命令编译名当前目录下的所有文件（${fileDirname}/*.cpp），并将其输出为名为 ${fileDirname} 的可执行文件。
 
-## 2. launch.json问价
+## 2. launch.json文件
 **作用**：launch.json 文件用于配置和自定义项目的调试任务。它可以帮助您在 VSCode 中设置断点、单步执行和查看变量等调试功能。这些调试任务可以通过按下 F5 或在 VSCode 的“运行”菜单中选择“启动调试”来执行。
 
 **配置解析**：
@@ -70,7 +70,7 @@
 
 # 二、VSCode下c++多文件夹项目编译调试（非makefile）
 ## 1. 项目目录划分
-![Alt text](pics/vscode%20c++%20非makefile%20目录划分.png)
+![Alt text](../pics/vscode%20c++%20非makefile%20目录划分.png)
 
 ## 2. 配置
 修改tasks.json文件中的配置：
