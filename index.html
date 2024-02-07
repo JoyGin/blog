@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Pages Index</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .directory-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .directory-list > li {
+      cursor: pointer;
+      margin-bottom: 5px;
+      padding: 5px;
+      background-color: #efefef;
+    }
+    .directory-list li ul {
+      list-style-type: none;
+      padding: 0 0 0 20px;
+      display: none; /* Hide by default */
+    }
+    .directory-list li.active > ul {
+      display: block; /* Show when active */
+    }
+  </style>
+</head>
+<body>
+
+<ul class="directory-list">
+  <li>Topic 1
+    <ul>
+      <li><a href="/docs/topic1/document1.md">Document 1</a></li>
+      <li><a href="/docs/topic1/document2.md">Document 2</a></li>
+    </ul>
+  </li>
+  <li>Topic 2
+    <ul>
+      <li><a href="/docs/topic2/document1.md">Document 1</a></li>
+      <li><a href="/docs/topic2/document2.md">Document 2</a></li>
+    </ul>
+  </li>
+  <li>其它
+    <ul>
+      <li><a href="./vpn.md">vpn</a></li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  // Using jQuery for simplicity
+  $(document).ready(function () {
+    $('.directory-list > li').click(function() {
+      // This will toggle the active class on and off when we click on a directory.
+      // $(this).toggleClass('active');
+      // This will toggle the show and hide when we click on a directory.
+      $(this).children('ul').slideToggle('fast');
+    });
+  });
+</script>
+
+</body>
+</html>
