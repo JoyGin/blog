@@ -9,14 +9,14 @@
 - 现在的网卡具备DMA能力，所以网卡和网络协议栈之间的数据传输由网卡负责，而非由内核亲自占用CPU来执行读和写。
 
 这里可以将内核看作是一个封闭的加工厂，将物理网卡看作是加工厂的一扇门，门的一端是加工厂，门的另一端是外界。物理网卡也一样，它的一端是内核空间的网络协议栈，另一端是外界网络，物理网卡就是这两者之间以比特流方式收发数据的硬件设备。
-<img src="pics/vpn-1.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/>
+<img src="../pics/vpn-1.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/>
 
 一般来说，数据的起点和终点是用户程序，所以多数时候的数据需要在用户空间和内核空间(网络协议栈)再传输一次：
 - 当用户进程的数据要发送出去时，数据从用户空间写入内核的网络协议栈，再从网络协议栈传输到网卡，最后发送出去
 - 当用户进程等待外界响应数据时，数据从网卡流入，传输至内核的网络协议栈，最后数据写入用户空间被用户进程读取
 
 在这些过程中，内核和用户空间的数据传输由内核占用CPU来完成，内核和网卡之间的数据传输由网卡的DMA来完成，不需要占用过多的CPU。
-<img src="pics/vpn-2.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/>
+<img src="../pics/vpn-2.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/>
 
 ### 二、虚拟网络收发数据流程
 物理网卡需要通过网卡驱动在内核中注册后才能工作，它在内核网络协议栈和外界网络之间传递数据，用户可以为物理网卡配置网卡接口属性，比如IP地址，这些属性都配置在内核的网络协议栈中。
@@ -29,7 +29,7 @@
 - 发送到虚拟网卡的数据来自于用户空间，然后被内核读取到网络协议栈中
 - 内核写入虚拟网卡准备通过该网卡发送的数据，目的地是用户空间
 
-<img src="pics/vpn-3.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/>
+<img src="../pics/vpn-3.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/>
 
 ### 三、虚拟网卡和物理网卡对比
 和物理网卡对比一下，物理网卡是硬件网卡，它位于硬件层，虚拟网卡则可以看作是用户空间的网卡，就像用户空间的文件系统(fuse)一样。
@@ -50,7 +50,7 @@
 
 一定请注意，用户空间的程序是无法对数据包做任何封装和解封操作的，所有的封装和解封都只能由内核的网络协议栈来完成。
 
-<img src="pics/vpn-4.png" alt="物理网卡数据传输" style="display: block; margin: auto;"/><br/>
+<img src="../pics/vpn-4.png" alt="物理网卡数据传输" style="display: block; margin: auto;"/><br/>
 
 使用OpenVPN之所以可以对数据再封装一层隧道IP层，是因为OpenVPN可以读取已经封装过一次IP首部的数据，并将包含ip首部的数据作为普通数据通过虚拟网卡再次传输给内核。因为内核接收到的是来自虚拟网卡的数据，所以内核会将其当作普通数据从头开始封装(从四层封装到二层封装)。当数据从网络协议栈流出时，就有了两层IP首部的封装。
 
@@ -164,7 +164,7 @@ Linux中创建tun、tap时，要求打开/dev/net/tun设备，打开后会返回
 
 假如物理网卡eth0从外界网络接收了这么一段特殊的ping请求数据：
 
-<img src="pics/vpn-5.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/><br/>
+<img src="../pics/vpn-5.png" alt="物理网卡数据传输" style="display: block; margin: auto;" height="50%" width="50%"/><br/>
 
 这份数据会从物理网卡传输到内核网络协议栈，网络协议栈会对其解封，解封的内容只能是tcp/ip协议栈中的内容，即只能解封帧头部、IP头部以及端口头部，网络协议栈解封后还剩下一段包含了内层IP头部(tun的IP)以及icmp请求的数据。
 
