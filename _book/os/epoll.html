@@ -1,0 +1,1498 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>epoll · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../gist/gist.html" />
+    
+    
+    <link rel="prev" href="os.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../android/android.html">
+            
+                <a href="../android/android.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../android/第一个view的measureSpec是如何生成的.html">
+            
+                <a href="../android/第一个view的measureSpec是如何生成的.html">
+            
+                    
+                    第一个view的measureSpec是如何生成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../android/添加so文件.html">
+            
+                <a href="../android/添加so文件.html">
+            
+                    
+                    添加so文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../android/android使用protobuf.html">
+            
+                <a href="../android/android使用protobuf.html">
+            
+                    
+                    android使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../android/android通过gradle使用protobuf.html">
+            
+                <a href="../android/android通过gradle使用protobuf.html">
+            
+                    
+                    android通过gradle使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../android/android插件化代理实现.html">
+            
+                <a href="../android/android插件化代理实现.html">
+            
+                    
+                    android插件化代理实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../android/android插件化Hook实现.html">
+            
+                <a href="../android/android插件化Hook实现.html">
+            
+                    
+                    android插件化Hook实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                <a href="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                    
+                    Make、Makefile、CMake和CMakeLists.txt之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                <a href="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                    
+                    Android.mk和CmakeLists.txt区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../android/Android.mk和Application.mk.html">
+            
+                <a href="../android/Android.mk和Application.mk.html">
+            
+                    
+                    Android.mk和Application.mk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../android/Android_NDK下Cmake的构建过程.html">
+            
+                <a href="../android/Android_NDK下Cmake的构建过程.html">
+            
+                    
+                    Android NDK 下 Cmake 的构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../android/AccessibilityService.html">
+            
+                <a href="../android/AccessibilityService.html">
+            
+                    
+                    AccessibilityService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ios/ios.html">
+            
+                <a href="../ios/ios.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ios/iOS_crash分析.html">
+            
+                <a href="../ios/iOS_crash分析.html">
+            
+                    
+                    iOS crash分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c_c++/c_c++.html">
+            
+                <a href="../c_c++/c_c++.html">
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../c_c++/clang和gcc.html">
+            
+                <a href="../c_c++/clang和gcc.html">
+            
+                    
+                    clang和gcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../c_c++/cmakeList.html">
+            
+                <a href="../c_c++/cmakeList.html">
+            
+                    
+                    cmakeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../c_c++/fork创建子进程.html">
+            
+                <a href="../c_c++/fork创建子进程.html">
+            
+                    
+                    fork()创建子进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../c_c++/vscode_C++开发配置.html">
+            
+                <a href="../c_c++/vscode_C++开发配置.html">
+            
+                    
+                    vscode C++开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../frontend/frontend.html">
+            
+                <a href="../frontend/frontend.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../frontend/ES6的模块化语法.html">
+            
+                <a href="../frontend/ES6的模块化语法.html">
+            
+                    
+                    ES6的模块化语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../frontend/javascript模块化历程.html">
+            
+                <a href="../frontend/javascript模块化历程.html">
+            
+                    
+                    javascript模块化历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../frontend/npm常用命令.html">
+            
+                <a href="../frontend/npm常用命令.html">
+            
+                    
+                    npm常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../go/go.html">
+            
+                <a href="../go/go.html">
+            
+                    
+                    GO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../go/GOPATH和GOROOT.html">
+            
+                <a href="../go/GOPATH和GOROOT.html">
+            
+                    
+                    GOPATH 和 GOROOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../java/java.html">
+            
+                <a href="../java/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../java/java内存空间和内存回收算法.html">
+            
+                <a href="../java/java内存空间和内存回收算法.html">
+            
+                    
+                    java内存空间和内存回收算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../java/java线程间数据共享.html">
+            
+                <a href="../java/java线程间数据共享.html">
+            
+                    
+                    java线程间数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../java/ServiceLoader使用.html">
+            
+                <a href="../java/ServiceLoader使用.html">
+            
+                    
+                    ServiceLoader使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../java/虚引用.html">
+            
+                <a href="../java/虚引用.html">
+            
+                    
+                    虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../network/network.html">
+            
+                <a href="../network/network.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../network/vpn.html">
+            
+                <a href="../network/vpn.html">
+            
+                    
+                    vpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="os.html">
+            
+                <a href="os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="9.1.1" data-path="epoll.html">
+            
+                <a href="epoll.html">
+            
+                    
+                    epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../gist/gist.html">
+            
+                <a href="../gist/gist.html">
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../gist/android/android.html">
+            
+                <a href="../gist/android/android.html">
+            
+                    
+                    Android代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1.1" data-path="../gist/android/实现悬浮窗功能.html">
+            
+                <a href="../gist/android/实现悬浮窗功能.html">
+            
+                    
+                    实现悬浮窗功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.2" data-path="../gist/android/将某个activity提到最前.html">
+            
+                <a href="../gist/android/将某个activity提到最前.html">
+            
+                    
+                    将某个activity提到最前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.3" data-path="../gist/android/获取webView日志.html">
+            
+                <a href="../gist/android/获取webView日志.html">
+            
+                    
+                    获取webView日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.4" data-path="../gist/android/获取状态栏高度.html">
+            
+                <a href="../gist/android/获取状态栏高度.html">
+            
+                    
+                    获取状态栏高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.5" data-path="../gist/android/让应用不出现在最近应用中.html">
+            
+                <a href="../gist/android/让应用不出现在最近应用中.html">
+            
+                    
+                    让应用不出现在最近应用中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.6" data-path="../gist/android/请求悬浮窗权限.html">
+            
+                <a href="../gist/android/请求悬浮窗权限.html">
+            
+                    
+                    请求悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.7" data-path="../gist/android/通过应用包名打开应用.html">
+            
+                <a href="../gist/android/通过应用包名打开应用.html">
+            
+                    
+                    通过应用包名打开应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../gist/flutter/flutter.html">
+            
+                <a href="../gist/flutter/flutter.html">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.2.1" data-path="../gist/flutter/flutter异步加载组件.html">
+            
+                <a href="../gist/flutter/flutter异步加载组件.html">
+            
+                    
+                    flutter异步加载组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.2" data-path="../gist/flutter/获取图片高度.html">
+            
+                <a href="../gist/flutter/获取图片高度.html">
+            
+                    
+                    获取图片高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.3" data-path="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                <a href="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                    
+                    解决按英文单词自动换行的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../gist/js/js.html">
+            
+                <a href="../gist/js/js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.3.1" data-path="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                <a href="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                    
+                    判断当前是企飞钉浏览环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../other/other.html">
+            
+                <a href="../other/other.html">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../other/hexdump使用.html">
+            
+                <a href="../other/hexdump使用.html">
+            
+                    
+                    hexdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../other/objdump使用.html">
+            
+                <a href="../other/objdump使用.html">
+            
+                    
+                    objdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../other/linux安装ffmpeg.html">
+            
+                <a href="../other/linux安装ffmpeg.html">
+            
+                    
+                    linux安装ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.4" data-path="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                <a href="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                    
+                    使用GDB分析C++动态符号解析执行过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >epoll</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="epoll">epoll</h1>
+<h2 id="1-简介">1. 简介</h2>
+<p>epoll 是 Linux 内核提供的一种高效的 I/O 事件通知机制，适用于需要处理大量并发连接的场景。它的主要作用是监控多个文件描述符，以便在这些文件描述符上有事件发生时通知应用程序。epoll 相比于传统的 select 和 poll，在处理大量文件描述符时具有更高的性能和更好的扩展性。</p>
+<h2 id="2-数据结构">2. 数据结构</h2>
+<p>epoll 实例：每个 epoll 实例在内核中对应一个 struct eventpoll 结构体，它包含了所有需要监控的文件描述符及其事件。
+红黑树：用于存储所有被监控的文件描述符及其事件。红黑树的特点是插入、删除和查找操作的时间复杂度都是 O(log N)。
+双向链表：用于存储已经准备好的事件。双向链表的特点是插入和删除操作的时间复杂度都是 O(1)。</p>
+<h2 id="3-系统调用">3. 系统调用</h2>
+<p>epoll 提供了三个主要的系统调用：</p>
+<ul>
+<li>epoll_create：创建一个 epoll 实例，返回一个文件描述符。</li>
+<li>epoll_ctl：用于控制 epoll 实例，添加、修改或删除监控的文件描述符。</li>
+<li>epoll_wait：等待事件的发生，并返回已经准备好的事件。</li>
+</ul>
+<h2 id="4-工作流程">4. 工作流程</h2>
+<ol>
+<li>创建 epoll 实例：</li>
+<li><p>调用 epoll_create 创建一个 epoll 实例，内核会分配一个 struct eventpoll 结构体，并初始化红黑树和双向链表。</p>
+</li>
+<li><p>添加/修改/删除文件描述符：</p>
+</li>
+<li>调用 epoll_ctl 可以将文件描述符添加到 epoll 实例的红黑树中，或者修改/删除已经存在的文件描述符。</li>
+<li><p>每个文件描述符会关联一个 epitem 结构体，包含文件描述符和事件信息。</p>
+</li>
+<li><p>等待事件：</p>
+</li>
+<li>调用 epoll_wait，内核会检查双向链表中是否有已经准备好的事件。</li>
+<li>如果有，直接返回这些事件。</li>
+<li>如果没有，内核会将当前进程/线程挂起，直到有事件发生。</li>
+<li>当文件描述符的状态发生变化时（例如可读、可写或错误），内核会将对应的 epitem 结构体从红黑树移动到双向链表中，并唤醒等待的进程/线程。</li>
+</ol>
+<h2 id="5-内核通知机制">5. 内核通知机制</h2>
+<ul>
+<li>当文件描述符的状态发生变化时，内核会调用回调函数，将对应的 epitem 结构体从红黑树移动到双向链表中。</li>
+<li>这种回调机制使得 epoll 可以高效地处理大量文件描述符，而不需要遍历所有文件描述符。</li>
+</ul>
+<h2 id="6-优化">6. 优化</h2>
+<ul>
+<li>边缘触发（Edge Triggered, ET）：epoll 支持边缘触发模式，只有在文件描述符状态从未准备好变为准备好时才通知用户。这种模式下，用户需要一次性处理所有可用的数据。</li>
+<li>水平触发（Level Triggered, LT）：默认模式，文件描述符只要处于准备好状态，就会不断通知用户。</li>
+</ul>
+<h2 id="7完整例子">7.完整例子</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;errno.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/socket.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;netinet/in.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;arpa/inet.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/epoll.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> MAX_EVENTS 10</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> PORT 8080</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> BUFFER_SIZE 1024</span>
+
+<span class="hljs-type">void</span> <span class="hljs-title function_">handle_connection</span><span class="hljs-params">(<span class="hljs-type">int</span> client_fd)</span> {
+    <span class="hljs-type">char</span> buffer[BUFFER_SIZE];
+    <span class="hljs-type">ssize_t</span> bytes_read;
+
+    bytes_read = read(client_fd, buffer, <span class="hljs-keyword">sizeof</span>(buffer) - <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (bytes_read == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;read&quot;</span>);
+        close(client_fd);
+        <span class="hljs-keyword">return</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (bytes_read == <span class="hljs-number">0</span>) {
+        <span class="hljs-comment">// Client closed the connection</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Client disconnected\n&quot;</span>);
+        close(client_fd);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    buffer[bytes_read] = <span class="hljs-string">&apos;\0&apos;</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Received: %s\n&quot;</span>, buffer);
+
+    <span class="hljs-comment">// Echo the message back to the client</span>
+    <span class="hljs-keyword">if</span> (write(client_fd, buffer, bytes_read) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;write&quot;</span>);
+        close(client_fd);
+    }
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-type">int</span> listen_fd, epoll_fd;
+    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">sockaddr_in</span> <span class="hljs-title">server_addr</span>;</span>
+    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">epoll_event</span> <span class="hljs-title">ev</span>, <span class="hljs-title">events</span>[<span class="hljs-title">MAX_EVENTS</span>];</span>
+
+    <span class="hljs-comment">// Create listening socket</span>
+    listen_fd = socket(AF_INET, SOCK_STREAM, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (listen_fd == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;socket&quot;</span>);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Set up server address</span>
+    <span class="hljs-built_in">memset</span>(&amp;server_addr, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+    server_addr.sin_port = htons(PORT);
+
+    <span class="hljs-comment">// Bind socket to address</span>
+    <span class="hljs-keyword">if</span> (bind(listen_fd, (<span class="hljs-keyword">struct</span> sockaddr *)&amp;server_addr, <span class="hljs-keyword">sizeof</span>(server_addr)) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;bind&quot;</span>);
+        close(listen_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Start listening for connections</span>
+    <span class="hljs-keyword">if</span> (listen(listen_fd, SOMAXCONN) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;listen&quot;</span>);
+        close(listen_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Create epoll instance</span>
+    epoll_fd = epoll_create1(<span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (epoll_fd == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;epoll_create1&quot;</span>);
+        close(listen_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Add listening socket to epoll</span>
+    ev.events = EPOLLIN;
+    ev.data.fd = listen_fd;
+    <span class="hljs-keyword">if</span> (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, listen_fd, &amp;ev) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;epoll_ctl: listen_fd&quot;</span>);
+        close(listen_fd);
+        close(epoll_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Server is listening on port %d\n&quot;</span>, PORT);
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+        <span class="hljs-type">int</span> nfds = epoll_wait(epoll_fd, events, MAX_EVENTS, <span class="hljs-number">-1</span>);
+        <span class="hljs-keyword">if</span> (nfds == <span class="hljs-number">-1</span>) {
+            perror(<span class="hljs-string">&quot;epoll_wait&quot;</span>);
+            close(listen_fd);
+            close(epoll_fd);
+            <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nfds; ++i) {
+            <span class="hljs-keyword">if</span> (events[i].data.fd == listen_fd) {
+                <span class="hljs-comment">// New incoming connection</span>
+                <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">sockaddr_in</span> <span class="hljs-title">client_addr</span>;</span>
+                <span class="hljs-type">socklen_t</span> client_addr_len = <span class="hljs-keyword">sizeof</span>(client_addr);
+                <span class="hljs-type">int</span> client_fd = accept(listen_fd, (<span class="hljs-keyword">struct</span> sockaddr *)&amp;client_addr, &amp;client_addr_len);
+                <span class="hljs-keyword">if</span> (client_fd == <span class="hljs-number">-1</span>) {
+                    perror(<span class="hljs-string">&quot;accept&quot;</span>);
+                    <span class="hljs-keyword">continue</span>;
+                }
+
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Accepted connection from %s:%d\n&quot;</span>,
+                       inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
+
+                <span class="hljs-comment">// Add new client socket to epoll</span>
+                ev.events = EPOLLIN;
+                ev.data.fd = client_fd;
+                <span class="hljs-keyword">if</span> (epoll_ctl(epoll_fd, EPOLL_CTL_ADD, client_fd, &amp;ev) == <span class="hljs-number">-1</span>) {
+                    perror(<span class="hljs-string">&quot;epoll_ctl: client_fd&quot;</span>);
+                    close(client_fd);
+                }
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-comment">// Handle data from client</span>
+                handle_connection(events[i].data.fd);
+            }
+        }
+    }
+
+    close(listen_fd);
+    close(epoll_fd);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="代码说明">代码说明</h3>
+<ol>
+<li>创建监听套接字：</li>
+<li>使用 socket 创建一个 TCP 套接字。</li>
+<li>使用 bind 将套接字绑定到指定的端口。</li>
+<li><p>使用 listen 开始监听连接。</p>
+</li>
+<li><p>创建 epoll 实例：</p>
+</li>
+<li>使用 epoll_create1 创建一个 epoll 实例。</li>
+<li><p>将监听套接字添加到 epoll 实例中，监听 EPOLLIN 事件。</p>
+</li>
+<li><p>事件循环：</p>
+</li>
+<li>使用 epoll_wait 等待事件发生。</li>
+<li>如果监听套接字有事件，表示有新的连接到来，使用 accept 接受连接，并将新连接的套接字添加到 epoll 实例中。</li>
+<li><p>如果是客户端套接字有事件，表示有数据可读，调用 handle_connection 处理数据。</p>
+</li>
+<li><p>处理客户端连接：</p>
+</li>
+<li>读取客户端发送的数据，并回显给客户端。</li>
+<li>如果读取失败或客户端关闭连接，关闭套接字。</li>
+</ol>
+<h3 id="编译和运行">编译和运行</h3>
+<p>将上述代码保存为 epoll_server.c，然后使用以下命令编译和运行：</p>
+<pre><code class="lang-sh">gcc -o epoll_server epoll_server.c
+./epoll_server
+</code></pre>
+<p>服务器启动后，可以使用 telnet 或其他工具连接到服务器，并发送消息进行测试。</p>
+<pre><code class="lang-sh">telnet ip port
+</code></pre>
+<h2 id="8-macos-上的-kqueue">8. macos 上的 kqueue</h2>
+<p>epoll 是 Linux 特有的 I/O 多路复用机制，macOS 并不支持 epoll。在 macOS 上，可以使用其他 I/O 多路复用机制，如 kqueue、select 和 poll。其中，kqueue 是 macOS 和其他 BSD 系统提供的高效 I/O 事件通知机制，功能和性能上与 epoll 类似。</p>
+<h3 id="kqueue-使用示例">kqueue 使用示例</h3>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;errno.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/socket.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;netinet/in.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;arpa/inet.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/event.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;sys/time.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> MAX_EVENTS 10</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> PORT 8080</span>
+<span class="hljs-meta">#<span class="hljs-keyword">define</span> BUFFER_SIZE 1024</span>
+
+<span class="hljs-type">void</span> <span class="hljs-title function_">handle_connection</span><span class="hljs-params">(<span class="hljs-type">int</span> client_fd)</span> {
+    <span class="hljs-type">char</span> buffer[BUFFER_SIZE];
+    <span class="hljs-type">ssize_t</span> bytes_read;
+
+    bytes_read = read(client_fd, buffer, <span class="hljs-keyword">sizeof</span>(buffer) - <span class="hljs-number">1</span>);
+    <span class="hljs-keyword">if</span> (bytes_read == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;read&quot;</span>);
+        close(client_fd);
+        <span class="hljs-keyword">return</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (bytes_read == <span class="hljs-number">0</span>) {
+        <span class="hljs-comment">// Client closed the connection</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Client disconnected\n&quot;</span>);
+        close(client_fd);
+        <span class="hljs-keyword">return</span>;
+    }
+
+    buffer[bytes_read] = <span class="hljs-string">&apos;\0&apos;</span>;
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Received: %s\n&quot;</span>, buffer);
+
+    <span class="hljs-comment">// Echo the message back to the client</span>
+    <span class="hljs-keyword">if</span> (write(client_fd, buffer, bytes_read) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;write&quot;</span>);
+        close(client_fd);
+    }
+}
+
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> {
+    <span class="hljs-type">int</span> listen_fd, kq;
+    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">sockaddr_in</span> <span class="hljs-title">server_addr</span>;</span>
+    <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">kevent</span> <span class="hljs-title">ev_set</span>, <span class="hljs-title">ev_list</span>[<span class="hljs-title">MAX_EVENTS</span>];</span>
+
+    <span class="hljs-comment">// Create listening socket</span>
+    listen_fd = socket(AF_INET, SOCK_STREAM, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (listen_fd == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;socket&quot;</span>);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Set up server address</span>
+    <span class="hljs-built_in">memset</span>(&amp;server_addr, <span class="hljs-number">0</span>, <span class="hljs-keyword">sizeof</span>(server_addr));
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+    server_addr.sin_port = htons(PORT);
+
+    <span class="hljs-comment">// Bind socket to address</span>
+    <span class="hljs-keyword">if</span> (bind(listen_fd, (<span class="hljs-keyword">struct</span> sockaddr *)&amp;server_addr, <span class="hljs-keyword">sizeof</span>(server_addr)) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;bind&quot;</span>);
+        close(listen_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Start listening for connections</span>
+    <span class="hljs-keyword">if</span> (listen(listen_fd, SOMAXCONN) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;listen&quot;</span>);
+        close(listen_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Create kqueue instance</span>
+    kq = kqueue();
+    <span class="hljs-keyword">if</span> (kq == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;kqueue&quot;</span>);
+        close(listen_fd);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-comment">// Add listening socket to kqueue</span>
+    EV_SET(&amp;ev_set, listen_fd, EVFILT_READ, EV_ADD, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-keyword">if</span> (kevent(kq, &amp;ev_set, <span class="hljs-number">1</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>) == <span class="hljs-number">-1</span>) {
+        perror(<span class="hljs-string">&quot;kevent: listen_fd&quot;</span>);
+        close(listen_fd);
+        close(kq);
+        <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+    }
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Server is listening on port %d\n&quot;</span>, PORT);
+
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+        <span class="hljs-type">int</span> nev = kevent(kq, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, ev_list, MAX_EVENTS, <span class="hljs-literal">NULL</span>);
+        <span class="hljs-keyword">if</span> (nev == <span class="hljs-number">-1</span>) {
+            perror(<span class="hljs-string">&quot;kevent&quot;</span>);
+            close(listen_fd);
+            close(kq);
+            <span class="hljs-built_in">exit</span>(EXIT_FAILURE);
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; nev; ++i) {
+            <span class="hljs-keyword">if</span> (ev_list[i].ident == listen_fd) {
+                <span class="hljs-comment">// New incoming connection</span>
+                <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">sockaddr_in</span> <span class="hljs-title">client_addr</span>;</span>
+                <span class="hljs-type">socklen_t</span> client_addr_len = <span class="hljs-keyword">sizeof</span>(client_addr);
+                <span class="hljs-type">int</span> client_fd = accept(listen_fd, (<span class="hljs-keyword">struct</span> sockaddr *)&amp;client_addr, &amp;client_addr_len);
+                <span class="hljs-keyword">if</span> (client_fd == <span class="hljs-number">-1</span>) {
+                    perror(<span class="hljs-string">&quot;accept&quot;</span>);
+                    <span class="hljs-keyword">continue</span>;
+                }
+
+                <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Accepted connection from %s:%d\n&quot;</span>,
+                       inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port));
+
+                <span class="hljs-comment">// Add new client socket to kqueue</span>
+                EV_SET(&amp;ev_set, client_fd, EVFILT_READ, EV_ADD, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>);
+                <span class="hljs-keyword">if</span> (kevent(kq, &amp;ev_set, <span class="hljs-number">1</span>, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>) == <span class="hljs-number">-1</span>) {
+                    perror(<span class="hljs-string">&quot;kevent: client_fd&quot;</span>);
+                    close(client_fd);
+                }
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-comment">// Handle data from client</span>
+                handle_connection(ev_list[i].ident);
+            }
+        }
+    }
+
+    close(listen_fd);
+    close(kq);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="代码说明">代码说明</h3>
+<ol>
+<li>创建监听套接字：</li>
+<li>使用 socket 创建一个 TCP 套接字。</li>
+<li>使用 bind 将套接字绑定到指定的端口。</li>
+<li><p>使用 listen 开始监听连接。</p>
+</li>
+<li><p>创建 kqueue 实例：</p>
+</li>
+<li>使用 kqueue 创建一个 kqueue 实例。</li>
+<li><p>将监听套接字添加到 kqueue 实例中，监听 EVFILT_READ 事件。</p>
+</li>
+<li><p>事件循环：</p>
+</li>
+<li>使用 kevent 等待事件发生。</li>
+<li>如果监听套接字有事件，表示有新的连接到来，使用 accept 接受连接，并将新连接的套接字添加到 kqueue 实例中。</li>
+<li><p>如果是客户端套接字有事件，表示有数据可读，调用 handle_connection 处理数据。</p>
+</li>
+<li><p>处理客户端连接：</p>
+</li>
+<li>读取客户端发送的数据，并回显给客户端。</li>
+<li>如果读取失败或客户端关闭连接，关闭套接字。</li>
+</ol>
+<h3 id="编译和运行">编译和运行</h3>
+<p>将上述代码保存为 kqueue_server.c，然后使用以下命令编译和运行：</p>
+<pre><code class="lang-sh">gcc -o kqueue_server kqueue_server.c
+./kqueue_server
+</code></pre>
+<p>服务器启动后，可以使用 nc 或其他工具连接到服务器，并发送消息进行测试。</p>
+<pre><code class="lang-sh">nc ip port
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="os.html" class="navigation navigation-prev " aria-label="Previous page: 操作系统">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../gist/gist.html" class="navigation navigation-next " aria-label="Next page: 代码片段">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"epoll","level":"9.1.1","depth":2,"next":{"title":"代码片段","level":"10.1","depth":1,"path":"gist/gist.md","ref":"gist/gist.md","articles":[{"title":"Android代码片段","level":"10.1.1","depth":2,"path":"gist/android/android.md","ref":"gist/android/android.md","articles":[{"title":"实现悬浮窗功能","level":"10.1.1.1","depth":3,"path":"gist/android/实现悬浮窗功能.md","ref":"gist/android/实现悬浮窗功能.md","articles":[]},{"title":"将某个activity提到最前","level":"10.1.1.2","depth":3,"path":"gist/android/将某个activity提到最前.md","ref":"gist/android/将某个activity提到最前.md","articles":[]},{"title":"获取webView日志","level":"10.1.1.3","depth":3,"path":"gist/android/获取webView日志.md","ref":"gist/android/获取webView日志.md","articles":[]},{"title":"获取状态栏高度","level":"10.1.1.4","depth":3,"path":"gist/android/获取状态栏高度.md","ref":"gist/android/获取状态栏高度.md","articles":[]},{"title":"让应用不出现在最近应用中","level":"10.1.1.5","depth":3,"path":"gist/android/让应用不出现在最近应用中.md","ref":"gist/android/让应用不出现在最近应用中.md","articles":[]},{"title":"请求悬浮窗权限","level":"10.1.1.6","depth":3,"path":"gist/android/请求悬浮窗权限.md","ref":"gist/android/请求悬浮窗权限.md","articles":[]},{"title":"通过应用包名打开应用","level":"10.1.1.7","depth":3,"path":"gist/android/通过应用包名打开应用.md","ref":"gist/android/通过应用包名打开应用.md","articles":[]}]},{"title":"flutter","level":"10.1.2","depth":2,"path":"gist/flutter/flutter.md","ref":"gist/flutter/flutter.md","articles":[{"title":"flutter异步加载组件","level":"10.1.2.1","depth":3,"path":"gist/flutter/flutter异步加载组件.md","ref":"gist/flutter/flutter异步加载组件.md","articles":[]},{"title":"获取图片高度","level":"10.1.2.2","depth":3,"path":"gist/flutter/获取图片高度.md","ref":"gist/flutter/获取图片高度.md","articles":[]},{"title":"解决按英文单词自动换行的问题","level":"10.1.2.3","depth":3,"path":"gist/flutter/解决按英文单词自动换行的问题.md","ref":"gist/flutter/解决按英文单词自动换行的问题.md","articles":[]}]},{"title":"js","level":"10.1.3","depth":2,"path":"gist/js/js.md","ref":"gist/js/js.md","articles":[{"title":"判断当前是企飞钉浏览环境","level":"10.1.3.1","depth":3,"path":"gist/js/判断当前是企飞钉浏览环境.md","ref":"gist/js/判断当前是企飞钉浏览环境.md","articles":[]}]}]},"previous":{"title":"操作系统","level":"9.1","depth":1,"path":"os/os.md","ref":"os/os.md","articles":[{"title":"epoll","level":"9.1.1","depth":2,"path":"os/epoll.md","ref":"os/epoll.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"os/epoll.md","mtime":"2024-07-12T02:30:57.426Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-07-12T11:23:21.120Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

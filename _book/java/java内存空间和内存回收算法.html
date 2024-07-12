@@ -1,0 +1,1202 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>java内存空间和内存回收算法 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="java线程间数据共享.html" />
+    
+    
+    <link rel="prev" href="java.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../android/android.html">
+            
+                <a href="../android/android.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../android/第一个view的measureSpec是如何生成的.html">
+            
+                <a href="../android/第一个view的measureSpec是如何生成的.html">
+            
+                    
+                    第一个view的measureSpec是如何生成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../android/添加so文件.html">
+            
+                <a href="../android/添加so文件.html">
+            
+                    
+                    添加so文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../android/android使用protobuf.html">
+            
+                <a href="../android/android使用protobuf.html">
+            
+                    
+                    android使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../android/android通过gradle使用protobuf.html">
+            
+                <a href="../android/android通过gradle使用protobuf.html">
+            
+                    
+                    android通过gradle使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../android/android插件化代理实现.html">
+            
+                <a href="../android/android插件化代理实现.html">
+            
+                    
+                    android插件化代理实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../android/android插件化Hook实现.html">
+            
+                <a href="../android/android插件化Hook实现.html">
+            
+                    
+                    android插件化Hook实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                <a href="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                    
+                    Make、Makefile、CMake和CMakeLists.txt之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                <a href="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                    
+                    Android.mk和CmakeLists.txt区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../android/Android.mk和Application.mk.html">
+            
+                <a href="../android/Android.mk和Application.mk.html">
+            
+                    
+                    Android.mk和Application.mk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../android/Android_NDK下Cmake的构建过程.html">
+            
+                <a href="../android/Android_NDK下Cmake的构建过程.html">
+            
+                    
+                    Android NDK 下 Cmake 的构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../android/AccessibilityService.html">
+            
+                <a href="../android/AccessibilityService.html">
+            
+                    
+                    AccessibilityService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ios/ios.html">
+            
+                <a href="../ios/ios.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ios/iOS_crash分析.html">
+            
+                <a href="../ios/iOS_crash分析.html">
+            
+                    
+                    iOS crash分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c_c++/c_c++.html">
+            
+                <a href="../c_c++/c_c++.html">
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../c_c++/clang和gcc.html">
+            
+                <a href="../c_c++/clang和gcc.html">
+            
+                    
+                    clang和gcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../c_c++/cmakeList.html">
+            
+                <a href="../c_c++/cmakeList.html">
+            
+                    
+                    cmakeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../c_c++/fork创建子进程.html">
+            
+                <a href="../c_c++/fork创建子进程.html">
+            
+                    
+                    fork()创建子进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../c_c++/vscode_C++开发配置.html">
+            
+                <a href="../c_c++/vscode_C++开发配置.html">
+            
+                    
+                    vscode C++开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../frontend/frontend.html">
+            
+                <a href="../frontend/frontend.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../frontend/ES6的模块化语法.html">
+            
+                <a href="../frontend/ES6的模块化语法.html">
+            
+                    
+                    ES6的模块化语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../frontend/javascript模块化历程.html">
+            
+                <a href="../frontend/javascript模块化历程.html">
+            
+                    
+                    javascript模块化历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../frontend/npm常用命令.html">
+            
+                <a href="../frontend/npm常用命令.html">
+            
+                    
+                    npm常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../go/go.html">
+            
+                <a href="../go/go.html">
+            
+                    
+                    GO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../go/GOPATH和GOROOT.html">
+            
+                <a href="../go/GOPATH和GOROOT.html">
+            
+                    
+                    GOPATH 和 GOROOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="java.html">
+            
+                <a href="java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="7.1.1" data-path="java内存空间和内存回收算法.html">
+            
+                <a href="java内存空间和内存回收算法.html">
+            
+                    
+                    java内存空间和内存回收算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="java线程间数据共享.html">
+            
+                <a href="java线程间数据共享.html">
+            
+                    
+                    java线程间数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="ServiceLoader使用.html">
+            
+                <a href="ServiceLoader使用.html">
+            
+                    
+                    ServiceLoader使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="虚引用.html">
+            
+                <a href="虚引用.html">
+            
+                    
+                    虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../network/network.html">
+            
+                <a href="../network/network.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../network/vpn.html">
+            
+                <a href="../network/vpn.html">
+            
+                    
+                    vpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../os/os.html">
+            
+                <a href="../os/os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../os/epoll.html">
+            
+                <a href="../os/epoll.html">
+            
+                    
+                    epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../gist/gist.html">
+            
+                <a href="../gist/gist.html">
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../gist/android/android.html">
+            
+                <a href="../gist/android/android.html">
+            
+                    
+                    Android代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1.1" data-path="../gist/android/实现悬浮窗功能.html">
+            
+                <a href="../gist/android/实现悬浮窗功能.html">
+            
+                    
+                    实现悬浮窗功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.2" data-path="../gist/android/将某个activity提到最前.html">
+            
+                <a href="../gist/android/将某个activity提到最前.html">
+            
+                    
+                    将某个activity提到最前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.3" data-path="../gist/android/获取webView日志.html">
+            
+                <a href="../gist/android/获取webView日志.html">
+            
+                    
+                    获取webView日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.4" data-path="../gist/android/获取状态栏高度.html">
+            
+                <a href="../gist/android/获取状态栏高度.html">
+            
+                    
+                    获取状态栏高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.5" data-path="../gist/android/让应用不出现在最近应用中.html">
+            
+                <a href="../gist/android/让应用不出现在最近应用中.html">
+            
+                    
+                    让应用不出现在最近应用中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.6" data-path="../gist/android/请求悬浮窗权限.html">
+            
+                <a href="../gist/android/请求悬浮窗权限.html">
+            
+                    
+                    请求悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.7" data-path="../gist/android/通过应用包名打开应用.html">
+            
+                <a href="../gist/android/通过应用包名打开应用.html">
+            
+                    
+                    通过应用包名打开应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../gist/flutter/flutter.html">
+            
+                <a href="../gist/flutter/flutter.html">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.2.1" data-path="../gist/flutter/flutter异步加载组件.html">
+            
+                <a href="../gist/flutter/flutter异步加载组件.html">
+            
+                    
+                    flutter异步加载组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.2" data-path="../gist/flutter/获取图片高度.html">
+            
+                <a href="../gist/flutter/获取图片高度.html">
+            
+                    
+                    获取图片高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.3" data-path="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                <a href="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                    
+                    解决按英文单词自动换行的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../gist/js/js.html">
+            
+                <a href="../gist/js/js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.3.1" data-path="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                <a href="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                    
+                    判断当前是企飞钉浏览环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../other/other.html">
+            
+                <a href="../other/other.html">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../other/hexdump使用.html">
+            
+                <a href="../other/hexdump使用.html">
+            
+                    
+                    hexdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../other/objdump使用.html">
+            
+                <a href="../other/objdump使用.html">
+            
+                    
+                    objdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../other/linux安装ffmpeg.html">
+            
+                <a href="../other/linux安装ffmpeg.html">
+            
+                    
+                    linux安装ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.4" data-path="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                <a href="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                    
+                    使用GDB分析C++动态符号解析执行过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >java内存空间和内存回收算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="一、java-内存空间">一、java 内存空间</h1>
+<p>在Java虚拟机（JVM）中，堆内存（Heap）是用于存储对象实例的主要区域，它被分为几个部分，其中包括年轻代（Young Generation）和老年代（Old Generation 或 Tenured Generation）。老年代是用来存储长时间存活的对象的区域。</p>
+<p>老年代对象通常存储在以下内存空间：</p>
+<ol>
+<li><p>老年代（Old Generation）: 这是堆内存的一部分，专门用于存储经过多次垃圾回收仍然存活的对象。在垃圾回收过程中，从年轻代晋升（Promotion）到老年代的对象会被移动到这个区域。</p>
+</li>
+<li><p>永久代（PermGen，Java 8之前）: 在Java 8之前的版本中，JVM使用永久代来存储类的元数据、常量池以及方法代码。尽管这不是老年代的一部分，但是由于它也用于存储长期存在的数据，因此有时会与老年代一起被提及。在Java 8及以后的版本中，永久代已被元空间（Metaspace）所取代。</p>
+</li>
+<li><p>元空间（Metaspace，Java 8及以后）: 在Java 8及以后的版本中，类的元数据被移动到了本地内存中的一个称为元空间的区域。元空间并不是堆内存的一部分，但它承担了之前永久代的一些职责。</p>
+</li>
+<li><p>大对象直接分配区域（Large Object Space，某些垃圾回收器）: 一些垃圾回收器，如G1（Garbage-First）垃圾回收器，可能会有一个专门的区域来存储大对象，以避免在年轻代和老年代之间频繁复制这些对象。</p>
+</li>
+</ol>
+<p>老年代的大小和行为可以通过JVM启动参数进行调整，例如<code>-Xms</code>和<code>-Xmx</code>用于设置堆内存的初始大小和最大大小，<code>-XX:NewRatio</code>用于调整年轻代和老年代的比例等。</p>
+<p>需要注意的是，具体的内存布局和管理细节可能会因为不同的JVM实现（如Oracle HotSpot、OpenJ9等）和不同的垃圾回收器（如Serial、Parallel、CMS、G1、ZGC等）而有所不同。</p>
+<h1 id="二、新声代和老年代内存回收的区别">二、新声代和老年代内存回收的区别</h1>
+<p>老年代（Old Generation）和新生代（Young Generation）的垃圾回收（GC）在目标、频率、回收算法和停顿时间等方面存在一些区别：</p>
+<ol>
+<li><p><strong>目标</strong>：</p>
+<ul>
+<li>新生代：主要目标是回收短命的对象，因为大多数对象都是朝生夕灭的。</li>
+<li>老年代：回收长时间存活的对象，这些对象经过多次GC后仍然存活。</li>
+</ul>
+</li>
+<li><p><strong>频率</strong>：</p>
+<ul>
+<li>新生代：GC发生得更频繁，因为新生代相对较小，对象的创建和销毁速度快。</li>
+<li>老年代：GC发生得不那么频繁，因为老年代较大，且对象存活时间长。</li>
+</ul>
+</li>
+<li><p><strong>回收算法</strong>：</p>
+<ul>
+<li>新生代：通常使用复制算法（Copying），将存活的对象从一个区域复制到另一个区域，这样可以快速清理掉大量的死亡对象。</li>
+<li>老年代：常用的算法包括标记-清除（Mark-Sweep）、标记-整理（Mark-Compact）或增量式垃圾回收。这些算法更适合处理存活对象较多的情况。</li>
+</ul>
+</li>
+<li><p><strong>停顿时间</strong>：</p>
+<ul>
+<li>新生代：由于使用复制算法，且只处理新生代区域，新生代GC（Minor GC）通常能够快速完成，导致的停顿时间较短。</li>
+<li>老年代：老年代GC（Major GC或Full GC）通常会导致更长的停顿时间，因为它涉及到更多的数据和更复杂的算法。在某些情况下，Full GC会涉及整个堆的回收，包括新生代和老年代。</li>
+</ul>
+</li>
+<li><p><strong>内存区域</strong>：</p>
+<ul>
+<li>新生代：通常分为三个区域：一个Eden区和两个Survivor区（通常称为S0和S1）。复制算法会在这些区域之间移动对象。</li>
+<li>老年代：通常是堆内存的一个连续区域，不涉及复制操作，但可能需要整理以避免内存碎片。</li>
+</ul>
+</li>
+<li><p><strong>优化目标</strong>：</p>
+<ul>
+<li>新生代：优化目标是尽可能快速地回收空间，减少对应用程序的影响。</li>
+<li>老年代：优化目标是减少内存碎片，确保长时间运行的应用程序的内存效率和稳定性。</li>
+</ul>
+</li>
+</ol>
+<p>不同的垃圾回收器可能会采用不同的策略来处理新生代和老年代的垃圾回收。例如，G1垃圾回收器将堆内存分割成多个区域，并可以同时管理新生代和老年代的回收，以实现更平衡的停顿时间和吞吐量。而ZGC和Shenandoah GC则专注于减少停顿时间，即使在老年代回收时也能保持低延迟。</p>
+<h1 id="三、老年代的回收时机">三、老年代的回收时机</h1>
+<p>老年代（Old Generation）中的对象通常在以下情况下会被垃圾回收器（Garbage Collector, GC）回收：</p>
+<ol>
+<li><p><strong>老年代空间不足时</strong>：当老年代空间接近满时，JVM会触发一次称为Major GC或Full GC的垃圾回收过程。这个过程会检查老年代中的对象，回收那些不再被任何引用的对象所占用的空间。</p>
+</li>
+<li><p><strong>System.gc()调用</strong>：当代码中显式调用System.gc()时，JVM会尽力执行垃圾回收，这通常包括老年代的回收。但是，这个调用是建议性的，JVM可以忽略这个请求。</p>
+</li>
+<li><p><strong>JVM内存管理决策</strong>：JVM的垃圾回收器可能会根据内存使用情况和GC算法的特点自动决定执行Full GC。例如，某些垃圾回收器会在年轻代晋升到老年代的对象数量达到一定阈值时触发Full GC。</p>
+</li>
+<li><p><strong>分配失败（Allocation Failure）</strong>：当老年代没有足够的空间分配新的对象时，也会触发Full GC。这种情况通常发生在对象从年轻代晋升到老年代时。</p>
+</li>
+<li><p><strong>JVM启动参数</strong>：某些JVM启动参数可以指定触发Full GC的条件，例如设置老年代使用率的阈值。</p>
+</li>
+</ol>
+<p>老年代的垃圾回收过程通常比年轻代的垃圾回收更耗时，因为它涉及到更多的对象和更复杂的数据结构。在老年代中，垃圾回收器通常使用标记-清除（Mark-Sweep）、标记-整理（Mark-Compact）或者增量式垃圾回收算法来回收内存。</p>
+<p>不同的垃圾回收器有不同的回收策略和优化方法。例如：</p>
+<ul>
+<li><strong>串行垃圾回收器（Serial GC）</strong>：适用于小型应用和单线程环境，它在进行垃圾回收时会暂停所有应用线程。</li>
+<li><strong>并行垃圾回收器（Parallel GC）</strong>：适用于多核处理器，可以并行处理垃圾回收任务，以减少GC的暂停时间。</li>
+<li><strong>并发标记清除（CMS GC）</strong>：减少垃圾回收时的停顿时间，通过并发标记和并发清除阶段来实现。</li>
+<li><strong>G1垃圾回收器（Garbage-First GC）</strong>：将堆内存划分为多个区域，并根据每个区域的回收价值来优先回收，以达到高效的垃圾回收。</li>
+<li><strong>ZGC（Z Garbage Collector）和Shenandoah GC</strong>：这些是低延迟垃圾回收器，旨在减少应用程序停顿时间，适用于大堆内存和需要快速响应时间的应用。</li>
+</ul>
+<p>了解和选择合适的垃圾回收器对于优化应用程序的性能和响应时间至关重要。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="java.html" class="navigation navigation-prev " aria-label="Previous page: Java">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="java线程间数据共享.html" class="navigation navigation-next " aria-label="Next page: java线程间数据共享">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"java内存空间和内存回收算法","level":"7.1.1","depth":2,"next":{"title":"java线程间数据共享","level":"7.1.2","depth":2,"path":"java/java线程间数据共享.md","ref":"java/java线程间数据共享.md","articles":[]},"previous":{"title":"Java","level":"7.1","depth":1,"path":"java/java.md","ref":"java/java.md","articles":[{"title":"java内存空间和内存回收算法","level":"7.1.1","depth":2,"path":"java/java内存空间和内存回收算法.md","ref":"java/java内存空间和内存回收算法.md","articles":[]},{"title":"java线程间数据共享","level":"7.1.2","depth":2,"path":"java/java线程间数据共享.md","ref":"java/java线程间数据共享.md","articles":[]},{"title":"ServiceLoader使用","level":"7.1.3","depth":2,"path":"java/ServiceLoader使用.md","ref":"java/ServiceLoader使用.md","articles":[]},{"title":"虚引用","level":"7.1.4","depth":2,"path":"java/虚引用.md","ref":"java/虚引用.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"java/java内存空间和内存回收算法.md","mtime":"2024-07-12T02:30:57.425Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-07-12T11:23:21.120Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

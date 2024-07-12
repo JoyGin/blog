@@ -1,0 +1,1199 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Android NDK 下 Cmake 的构建过程 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="AccessibilityService.html" />
+    
+    
+    <link rel="prev" href="Android.mk和Application.mk.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="android.html">
+            
+                <a href="android.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="第一个view的measureSpec是如何生成的.html">
+            
+                <a href="第一个view的measureSpec是如何生成的.html">
+            
+                    
+                    第一个view的measureSpec是如何生成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="添加so文件.html">
+            
+                <a href="添加so文件.html">
+            
+                    
+                    添加so文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="android使用protobuf.html">
+            
+                <a href="android使用protobuf.html">
+            
+                    
+                    android使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="android通过gradle使用protobuf.html">
+            
+                <a href="android通过gradle使用protobuf.html">
+            
+                    
+                    android通过gradle使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="android插件化代理实现.html">
+            
+                <a href="android插件化代理实现.html">
+            
+                    
+                    android插件化代理实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="android插件化Hook实现.html">
+            
+                <a href="android插件化Hook实现.html">
+            
+                    
+                    android插件化Hook实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                <a href="Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                    
+                    Make、Makefile、CMake和CMakeLists.txt之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="Android.mk和CmakeLists.txt区别.html">
+            
+                <a href="Android.mk和CmakeLists.txt区别.html">
+            
+                    
+                    Android.mk和CmakeLists.txt区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="Android.mk和Application.mk.html">
+            
+                <a href="Android.mk和Application.mk.html">
+            
+                    
+                    Android.mk和Application.mk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.10" data-path="Android_NDK下Cmake的构建过程.html">
+            
+                <a href="Android_NDK下Cmake的构建过程.html">
+            
+                    
+                    Android NDK 下 Cmake 的构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="AccessibilityService.html">
+            
+                <a href="AccessibilityService.html">
+            
+                    
+                    AccessibilityService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ios/ios.html">
+            
+                <a href="../ios/ios.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ios/iOS_crash分析.html">
+            
+                <a href="../ios/iOS_crash分析.html">
+            
+                    
+                    iOS crash分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c_c++/c_c++.html">
+            
+                <a href="../c_c++/c_c++.html">
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../c_c++/clang和gcc.html">
+            
+                <a href="../c_c++/clang和gcc.html">
+            
+                    
+                    clang和gcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../c_c++/cmakeList.html">
+            
+                <a href="../c_c++/cmakeList.html">
+            
+                    
+                    cmakeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../c_c++/fork创建子进程.html">
+            
+                <a href="../c_c++/fork创建子进程.html">
+            
+                    
+                    fork()创建子进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../c_c++/vscode_C++开发配置.html">
+            
+                <a href="../c_c++/vscode_C++开发配置.html">
+            
+                    
+                    vscode C++开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../frontend/frontend.html">
+            
+                <a href="../frontend/frontend.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../frontend/ES6的模块化语法.html">
+            
+                <a href="../frontend/ES6的模块化语法.html">
+            
+                    
+                    ES6的模块化语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../frontend/javascript模块化历程.html">
+            
+                <a href="../frontend/javascript模块化历程.html">
+            
+                    
+                    javascript模块化历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../frontend/npm常用命令.html">
+            
+                <a href="../frontend/npm常用命令.html">
+            
+                    
+                    npm常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../go/go.html">
+            
+                <a href="../go/go.html">
+            
+                    
+                    GO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../go/GOPATH和GOROOT.html">
+            
+                <a href="../go/GOPATH和GOROOT.html">
+            
+                    
+                    GOPATH 和 GOROOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../java/java.html">
+            
+                <a href="../java/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../java/java内存空间和内存回收算法.html">
+            
+                <a href="../java/java内存空间和内存回收算法.html">
+            
+                    
+                    java内存空间和内存回收算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../java/java线程间数据共享.html">
+            
+                <a href="../java/java线程间数据共享.html">
+            
+                    
+                    java线程间数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../java/ServiceLoader使用.html">
+            
+                <a href="../java/ServiceLoader使用.html">
+            
+                    
+                    ServiceLoader使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../java/虚引用.html">
+            
+                <a href="../java/虚引用.html">
+            
+                    
+                    虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../network/network.html">
+            
+                <a href="../network/network.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../network/vpn.html">
+            
+                <a href="../network/vpn.html">
+            
+                    
+                    vpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../os/os.html">
+            
+                <a href="../os/os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../os/epoll.html">
+            
+                <a href="../os/epoll.html">
+            
+                    
+                    epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../gist/gist.html">
+            
+                <a href="../gist/gist.html">
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../gist/android/android.html">
+            
+                <a href="../gist/android/android.html">
+            
+                    
+                    Android代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1.1" data-path="../gist/android/实现悬浮窗功能.html">
+            
+                <a href="../gist/android/实现悬浮窗功能.html">
+            
+                    
+                    实现悬浮窗功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.2" data-path="../gist/android/将某个activity提到最前.html">
+            
+                <a href="../gist/android/将某个activity提到最前.html">
+            
+                    
+                    将某个activity提到最前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.3" data-path="../gist/android/获取webView日志.html">
+            
+                <a href="../gist/android/获取webView日志.html">
+            
+                    
+                    获取webView日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.4" data-path="../gist/android/获取状态栏高度.html">
+            
+                <a href="../gist/android/获取状态栏高度.html">
+            
+                    
+                    获取状态栏高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.5" data-path="../gist/android/让应用不出现在最近应用中.html">
+            
+                <a href="../gist/android/让应用不出现在最近应用中.html">
+            
+                    
+                    让应用不出现在最近应用中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.6" data-path="../gist/android/请求悬浮窗权限.html">
+            
+                <a href="../gist/android/请求悬浮窗权限.html">
+            
+                    
+                    请求悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.7" data-path="../gist/android/通过应用包名打开应用.html">
+            
+                <a href="../gist/android/通过应用包名打开应用.html">
+            
+                    
+                    通过应用包名打开应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../gist/flutter/flutter.html">
+            
+                <a href="../gist/flutter/flutter.html">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.2.1" data-path="../gist/flutter/flutter异步加载组件.html">
+            
+                <a href="../gist/flutter/flutter异步加载组件.html">
+            
+                    
+                    flutter异步加载组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.2" data-path="../gist/flutter/获取图片高度.html">
+            
+                <a href="../gist/flutter/获取图片高度.html">
+            
+                    
+                    获取图片高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.3" data-path="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                <a href="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                    
+                    解决按英文单词自动换行的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../gist/js/js.html">
+            
+                <a href="../gist/js/js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.3.1" data-path="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                <a href="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                    
+                    判断当前是企飞钉浏览环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../other/other.html">
+            
+                <a href="../other/other.html">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../other/hexdump使用.html">
+            
+                <a href="../other/hexdump使用.html">
+            
+                    
+                    hexdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../other/objdump使用.html">
+            
+                <a href="../other/objdump使用.html">
+            
+                    
+                    objdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../other/linux安装ffmpeg.html">
+            
+                <a href="../other/linux安装ffmpeg.html">
+            
+                    
+                    linux安装ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.4" data-path="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                <a href="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                    
+                    使用GDB分析C++动态符号解析执行过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Android NDK 下 Cmake 的构建过程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>在Android NDK下使用CMake的构建过程涉及一系列步骤，从编写<code>CMakeLists.txt</code>配置文件开始，一直到最终生成可执行文件或库文件。以下是使用CMake构建Android NDK项目的基本步骤：</p>
+<h3 id="1-编写cmakeliststxt">1. 编写CMakeLists.txt</h3>
+<p>创建<code>CMakeLists.txt</code>文件并放置在项目的相应位置（通常是项目根目录或者包含原生代码的子目录）。这个文件包含了CMake运行构建所需知道的指令，例如：</p>
+<ul>
+<li>项目名称和版本。</li>
+<li>所需CMake的最小版本。</li>
+<li>添加源代码。</li>
+<li>设置构建目标（可执行文件或库）。</li>
+<li>找到并链接所需的库（包括预编译的第三方库或系统库）。</li>
+</ul>
+<h3 id="2-设置构建脚本">2. 设置构建脚本</h3>
+<p>在<code>build.gradle</code>文件中添加ndk-build或CMake的路径和参数，这告诉Gradle使用CMake来代替默认的构建工具链（如果之前是用的ndk-build的话）。</p>
+<p>例如：</p>
+<pre><code class="lang-gradle">android {
+    ...
+    defaultConfig {
+        ...
+        externalNativeBuild {
+            cmake {
+                <span class="hljs-comment">// 设置CMakeLists.txt的位置</span>
+                path <span class="hljs-string">&quot;CMakeLists.txt&quot;</span>
+                <span class="hljs-comment">// 可以设置其他一些构建选项</span>
+                version <span class="hljs-string">&quot;3.10.2&quot;</span> <span class="hljs-comment">// 指定CMake的最小版本</span>
+            }
+        }
+    }
+    ...
+    <span class="hljs-comment">// 配置外部的原生构建</span>
+    externalNativeBuild {
+        cmake {
+            <span class="hljs-comment">// 指定CMake构建过程中生成的中间件和输出文件的位置</span>
+            path <span class="hljs-string">&quot;src/main/cpp/CMakeLists.txt&quot;</span>
+        }
+    }
+}
+</code></pre>
+<h3 id="3-运行cmake">3. 运行CMake</h3>
+<p>当你构建你的应用程序时（例如，在Android Studio中点击‘Run’按钮），以下步骤会依次发生：</p>
+<ul>
+<li>Gradle会调用CMake，根据<code>CMakeLists.txt</code>文件和指定的ABI（Application Binary Interface）、平台和构建类型（比如debug或release）等来配置项目。</li>
+<li>CMake将检查系统环境，如编译器和工具链，并生成相应的构建文件（在Android的情况下，通常是ninja构建文件）。</li>
+<li>接下来，Gradle会调用相应的构建系统（如Make或Ninja）执行CMake生成的构建脚本。</li>
+<li>构建系统将编译源代码并将其链接到指定的目标，比如一个库（<code>.so</code>文件）或一个可执行文件。</li>
+</ul>
+<h3 id="4-构建输出">4. 构建输出</h3>
+<p>构建输出（包括任何中间件和最终生成的二进制文件）会根据<code>CMakeLists.txt</code>中的设置放置在相应的目录中。这些文件最终将被打包到APK或AAB文件中，作为应用程序的一部分被安装到Android设备上。</p>
+<h3 id="5-运行和调试">5. 运行和调试</h3>
+<p>在Android Studio中，一旦构建完成，你可以运行和调试你的应用。如果是原生应用，你将有机会在C++代码级别进行调试。</p>
+<h3 id="错误处理和日志">错误处理和日志</h3>
+<p>如果在构建过程中出现错误，输出中会提示相应的错误和警告。可以通过Android Studio的Build输出面板，或者查看CMake生成的日志来进行错误的诊断和修复。</p>
+<h3 id="总结">总结</h3>
+<p>CMake在Android NDK构建过程中的角色是生成构建规则和管理依赖。而Gradle负责控制CMake的构建流程，并将生成的原生库包含到Android应用包中。这个过程完全集成在Android Studio中，提供了强大的构建、运行和调试功能。</p>
+<h3 id="问题">问题</h3>
+<h5 id="gradle会调用相应的构建系统（如make或ninja）是根据什么决定调用什么系统的？">Gradle会调用相应的构建系统（如Make或Ninja）是根据什么决定调用什么系统的？</h5>
+<p>在Android的构建过程中，Gradle实际上是根据<code>build.gradle</code>文件中的配置和CMake生成的构建脚本来决定使用的构建系统的。</p>
+<p>对于CMake，在Android环境中，默认的构建系统通常是Ninja，一个高性能的小型构建系统，它专注于速度和效率。当Gradle调用CMake时，CMake会生成适用于Ninja的构建文件，然后Gradle会使用Ninja来编译和链接C/C++源代码。</p>
+<p>这是由CMake的配置决定的，在Android Studio的较新版本中，当你通过<code>CMakeLists.txt</code>文件配置你的项目时，CMake通过下面的命令隐式地使用Ninja：</p>
+<pre><code class="lang-cmake">cmake -G Ninja ...
+</code></pre>
+<p>这个<code>-G</code>选项是指&quot;CMake Generator&quot;，Ninja就是被指定的生成器。通常情况下，你作为开发者不需要手动指定这个选项；CMake集成在Android Studio时会自动设置这一点。</p>
+<p>如果你想要更改或明确指定使用不同的构建系统，你可能需要在项目的<code>CMakeLists.txt</code>文件或者Android Studio的构建配置中修改相应的设置。但通常没有必要，因为Ninja被认为对于大多数Android NDK项目来说性能已经足够好。</p>
+<p>在一些特殊情况下，如果需要使用Make替代Ninja，你可能要在CMake调用参数中指定一个不同的生成器：</p>
+<pre><code class="lang-gradle">android {
+    ...
+    defaultConfig {
+        ...
+        externalNativeBuild {
+            cmake {
+                arguments <span class="hljs-string">&quot;-G&quot;</span>, <span class="hljs-string">&quot;Unix Makefiles&quot;</span> <span class="hljs-comment">// 明确指定使用Unix Makefiles生成器</span>
+                ...
+            }
+        }
+    }
+    ...
+}
+</code></pre>
+<p>总之，Gradle调用的构建系统基本上遵循CMake生成的构建脚本的指示，而这通常是自动配置的，不需要手动干预。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Android.mk和Application.mk.html" class="navigation navigation-prev " aria-label="Previous page: Android.mk和Application.mk">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="AccessibilityService.html" class="navigation navigation-next " aria-label="Next page: AccessibilityService">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Android NDK 下 Cmake 的构建过程","level":"2.1.10","depth":2,"next":{"title":"AccessibilityService","level":"2.1.11","depth":2,"path":"android/AccessibilityService.md","ref":"android/AccessibilityService.md","articles":[]},"previous":{"title":"Android.mk和Application.mk","level":"2.1.9","depth":2,"path":"android/Android.mk和Application.mk.md","ref":"android/Android.mk和Application.mk.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/Android_NDK下Cmake的构建过程.md","mtime":"2024-07-12T02:30:57.422Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-07-12T11:23:21.120Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

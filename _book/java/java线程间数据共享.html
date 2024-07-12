@@ -1,0 +1,1274 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>java线程间数据共享 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ServiceLoader使用.html" />
+    
+    
+    <link rel="prev" href="java内存空间和内存回收算法.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../android/android.html">
+            
+                <a href="../android/android.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../android/第一个view的measureSpec是如何生成的.html">
+            
+                <a href="../android/第一个view的measureSpec是如何生成的.html">
+            
+                    
+                    第一个view的measureSpec是如何生成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../android/添加so文件.html">
+            
+                <a href="../android/添加so文件.html">
+            
+                    
+                    添加so文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../android/android使用protobuf.html">
+            
+                <a href="../android/android使用protobuf.html">
+            
+                    
+                    android使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../android/android通过gradle使用protobuf.html">
+            
+                <a href="../android/android通过gradle使用protobuf.html">
+            
+                    
+                    android通过gradle使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../android/android插件化代理实现.html">
+            
+                <a href="../android/android插件化代理实现.html">
+            
+                    
+                    android插件化代理实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../android/android插件化Hook实现.html">
+            
+                <a href="../android/android插件化Hook实现.html">
+            
+                    
+                    android插件化Hook实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                <a href="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                    
+                    Make、Makefile、CMake和CMakeLists.txt之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                <a href="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                    
+                    Android.mk和CmakeLists.txt区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../android/Android.mk和Application.mk.html">
+            
+                <a href="../android/Android.mk和Application.mk.html">
+            
+                    
+                    Android.mk和Application.mk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../android/Android_NDK下Cmake的构建过程.html">
+            
+                <a href="../android/Android_NDK下Cmake的构建过程.html">
+            
+                    
+                    Android NDK 下 Cmake 的构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../android/AccessibilityService.html">
+            
+                <a href="../android/AccessibilityService.html">
+            
+                    
+                    AccessibilityService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ios/ios.html">
+            
+                <a href="../ios/ios.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ios/iOS_crash分析.html">
+            
+                <a href="../ios/iOS_crash分析.html">
+            
+                    
+                    iOS crash分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c_c++/c_c++.html">
+            
+                <a href="../c_c++/c_c++.html">
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../c_c++/clang和gcc.html">
+            
+                <a href="../c_c++/clang和gcc.html">
+            
+                    
+                    clang和gcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../c_c++/cmakeList.html">
+            
+                <a href="../c_c++/cmakeList.html">
+            
+                    
+                    cmakeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../c_c++/fork创建子进程.html">
+            
+                <a href="../c_c++/fork创建子进程.html">
+            
+                    
+                    fork()创建子进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../c_c++/vscode_C++开发配置.html">
+            
+                <a href="../c_c++/vscode_C++开发配置.html">
+            
+                    
+                    vscode C++开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../frontend/frontend.html">
+            
+                <a href="../frontend/frontend.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../frontend/ES6的模块化语法.html">
+            
+                <a href="../frontend/ES6的模块化语法.html">
+            
+                    
+                    ES6的模块化语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../frontend/javascript模块化历程.html">
+            
+                <a href="../frontend/javascript模块化历程.html">
+            
+                    
+                    javascript模块化历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../frontend/npm常用命令.html">
+            
+                <a href="../frontend/npm常用命令.html">
+            
+                    
+                    npm常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../go/go.html">
+            
+                <a href="../go/go.html">
+            
+                    
+                    GO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../go/GOPATH和GOROOT.html">
+            
+                <a href="../go/GOPATH和GOROOT.html">
+            
+                    
+                    GOPATH 和 GOROOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="java.html">
+            
+                <a href="java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="java内存空间和内存回收算法.html">
+            
+                <a href="java内存空间和内存回收算法.html">
+            
+                    
+                    java内存空间和内存回收算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.1.2" data-path="java线程间数据共享.html">
+            
+                <a href="java线程间数据共享.html">
+            
+                    
+                    java线程间数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="ServiceLoader使用.html">
+            
+                <a href="ServiceLoader使用.html">
+            
+                    
+                    ServiceLoader使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="虚引用.html">
+            
+                <a href="虚引用.html">
+            
+                    
+                    虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../network/network.html">
+            
+                <a href="../network/network.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../network/vpn.html">
+            
+                <a href="../network/vpn.html">
+            
+                    
+                    vpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../os/os.html">
+            
+                <a href="../os/os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../os/epoll.html">
+            
+                <a href="../os/epoll.html">
+            
+                    
+                    epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../gist/gist.html">
+            
+                <a href="../gist/gist.html">
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../gist/android/android.html">
+            
+                <a href="../gist/android/android.html">
+            
+                    
+                    Android代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1.1" data-path="../gist/android/实现悬浮窗功能.html">
+            
+                <a href="../gist/android/实现悬浮窗功能.html">
+            
+                    
+                    实现悬浮窗功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.2" data-path="../gist/android/将某个activity提到最前.html">
+            
+                <a href="../gist/android/将某个activity提到最前.html">
+            
+                    
+                    将某个activity提到最前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.3" data-path="../gist/android/获取webView日志.html">
+            
+                <a href="../gist/android/获取webView日志.html">
+            
+                    
+                    获取webView日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.4" data-path="../gist/android/获取状态栏高度.html">
+            
+                <a href="../gist/android/获取状态栏高度.html">
+            
+                    
+                    获取状态栏高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.5" data-path="../gist/android/让应用不出现在最近应用中.html">
+            
+                <a href="../gist/android/让应用不出现在最近应用中.html">
+            
+                    
+                    让应用不出现在最近应用中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.6" data-path="../gist/android/请求悬浮窗权限.html">
+            
+                <a href="../gist/android/请求悬浮窗权限.html">
+            
+                    
+                    请求悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.7" data-path="../gist/android/通过应用包名打开应用.html">
+            
+                <a href="../gist/android/通过应用包名打开应用.html">
+            
+                    
+                    通过应用包名打开应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../gist/flutter/flutter.html">
+            
+                <a href="../gist/flutter/flutter.html">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.2.1" data-path="../gist/flutter/flutter异步加载组件.html">
+            
+                <a href="../gist/flutter/flutter异步加载组件.html">
+            
+                    
+                    flutter异步加载组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.2" data-path="../gist/flutter/获取图片高度.html">
+            
+                <a href="../gist/flutter/获取图片高度.html">
+            
+                    
+                    获取图片高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.3" data-path="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                <a href="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                    
+                    解决按英文单词自动换行的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../gist/js/js.html">
+            
+                <a href="../gist/js/js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.3.1" data-path="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                <a href="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                    
+                    判断当前是企飞钉浏览环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../other/other.html">
+            
+                <a href="../other/other.html">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../other/hexdump使用.html">
+            
+                <a href="../other/hexdump使用.html">
+            
+                    
+                    hexdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../other/objdump使用.html">
+            
+                <a href="../other/objdump使用.html">
+            
+                    
+                    objdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../other/linux安装ffmpeg.html">
+            
+                <a href="../other/linux安装ffmpeg.html">
+            
+                    
+                    linux安装ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.4" data-path="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                <a href="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                    
+                    使用GDB分析C++动态符号解析执行过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >java线程间数据共享</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Java中实现线程间通信的方式主要有以下几种：</p>
+<ol>
+<li><p><strong>等待/通知机制（wait/notify）</strong>：</p>
+<ul>
+<li><code>wait()</code>：使当前线程等待，直到另一个线程调用同一个对象的<code>notify()</code>或<code>notifyAll()</code>方法。</li>
+<li><code>notify()</code>：唤醒在此对象监视器上等待的单个线程。</li>
+<li><code>notifyAll()</code>：唤醒在此对象监视器上等待的所有线程。</li>
+</ul>
+<p>使用时，这些方法必须在同步代码块或同步方法中调用，因为它们需要对象锁。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">SharedObject</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">waitForSignal</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> InterruptedException {
+        <span class="hljs-keyword">while</span> (<span class="hljs-comment">/* condition not met */</span>) {
+            wait();
+        }
+        <span class="hljs-comment">// Perform action appropriate to condition</span>
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">doNotify</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// Change condition</span>
+        notify();
+        <span class="hljs-comment">// or notifyAll();</span>
+    }
+}
+</code></pre>
+</li>
+<li><p><strong>管道通信（PipedInputStream/PipedOutputStream）</strong>：</p>
+<ul>
+<li>主要用于在不同线程间传输数据，一个线程发送数据到输出管道，另一个线程从输入管道读取数据。</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-type">PipedOutputStream</span> <span class="hljs-variable">output</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PipedOutputStream</span>();
+<span class="hljs-type">PipedInputStream</span> <span class="hljs-variable">input</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PipedInputStream</span>(output);
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            output.write(<span class="hljs-string">&quot;Hello, world!&quot;</span>.getBytes());
+            output.close();
+        } <span class="hljs-keyword">catch</span> (IOException e) {}
+    }
+}).start();
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-type">int</span> <span class="hljs-variable">data</span> <span class="hljs-operator">=</span> input.read();
+            <span class="hljs-keyword">while</span> (data != -<span class="hljs-number">1</span>) {
+                System.out.print((<span class="hljs-type">char</span>) data);
+                data = input.read();
+            }
+            input.close();
+        } <span class="hljs-keyword">catch</span> (IOException e) {}
+    }
+}).start();
+</code></pre>
+</li>
+<li><p><strong>信号量（Semaphore）</strong>：</p>
+<ul>
+<li>信号量可以控制对共享资源的访问，通过acquire()和release()方法来获取和释放许可。</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-type">Semaphore</span> <span class="hljs-variable">semaphore</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Semaphore</span>(<span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            semaphore.acquire();
+            <span class="hljs-comment">// Critical section</span>
+        } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+            <span class="hljs-comment">// Handle exception</span>
+        } <span class="hljs-keyword">finally</span> {
+            semaphore.release();
+        }
+    }
+}).start();
+</code></pre>
+</li>
+<li><p><strong>CountDownLatch/CyclicBarrier</strong>：</p>
+<ul>
+<li><code>CountDownLatch</code>：允许一个或多个线程等待一系列指定操作的完成。</li>
+<li><code>CyclicBarrier</code>：允许一组线程互相等待，达到一个公共屏障点后再继续执行。</li>
+</ul>
+<pre><code class="lang-java"><span class="hljs-type">CountDownLatch</span> <span class="hljs-variable">latch</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">CountDownLatch</span>(<span class="hljs-number">1</span>);
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// Perform task</span>
+        latch.countDown();
+    }
+}).start();
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            latch.await();
+            <span class="hljs-comment">// Continue with execution</span>
+        } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+            <span class="hljs-comment">// Handle exception</span>
+        }
+    }
+}).start();
+</code></pre>
+</li>
+<li><p><strong>BlockingQueue</strong>：</p>
+<ul>
+<li>阻塞队列提供了线程安全的队列操作，线程可以安全地从队列中插入和移除元素，如果队列为空或满时，线程会阻塞。</li>
+</ul>
+<pre><code class="lang-java">BlockingQueue&lt;Integer&gt; queue = <span class="hljs-keyword">new</span> <span class="hljs-title class_">LinkedBlockingQueue</span>&lt;&gt;();
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            queue.put(<span class="hljs-number">1</span>);
+        } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+            <span class="hljs-comment">// Handle exception</span>
+        }
+    }
+}).start();
+
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Runnable</span>() {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> queue.take();
+            <span class="hljs-comment">// Process value</span>
+        } <span class="hljs-keyword">catch</span> (InterruptedException e) {
+            <span class="hljs-comment">// Handle exception</span>
+        }
+    }
+}).start();
+</code></pre>
+</li>
+<li><p><strong>FutureTask/Callable</strong>：</p>
+<ul>
+<li><code>Callable</code>接口代表一个可以返回结果的任务，而<code>FutureTask</code>可以包装<code>Callable</code>，并且可以用来查询任务是否完成，等待任务完成，以及获取任务的结果。</li>
+</ul>
+<pre><code class="lang-java">Callable&lt;Integer&gt; callable = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Callable</span>&lt;Integer&gt;() {
+    <span class="hljs-keyword">public</span> Integer <span class="hljs-title function_">call</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception {
+        <span class="hljs-comment">// Perform computation and return result</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-number">42</span>;
+    }
+};
+
+FutureTask&lt;Integer&gt; futureTask = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FutureTask</span>&lt;&gt;(callable);
+<span class="hljs-keyword">new</span> <span class="hljs-title class_">Thread</span>(futureTask).start();
+
+<span class="hljs-keyword">try</span> {
+    <span class="hljs-type">Integer</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> futureTask.get(); <span class="hljs-comment">// This will block until the result is available</span>
+} <span class="hljs-keyword">catch</span> (InterruptedException | ExecutionException e) {
+    <span class="hljs-comment">// Handle exception</span>
+}
+</code></pre>
+</li>
+</ol>
+<p>这些是Java中实现线程间通信的一些常用方式。在实际应用中，应根据具体需求选择最合适的通信机制。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="java内存空间和内存回收算法.html" class="navigation navigation-prev " aria-label="Previous page: java内存空间和内存回收算法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ServiceLoader使用.html" class="navigation navigation-next " aria-label="Next page: ServiceLoader使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"java线程间数据共享","level":"7.1.2","depth":2,"next":{"title":"ServiceLoader使用","level":"7.1.3","depth":2,"path":"java/ServiceLoader使用.md","ref":"java/ServiceLoader使用.md","articles":[]},"previous":{"title":"java内存空间和内存回收算法","level":"7.1.1","depth":2,"path":"java/java内存空间和内存回收算法.md","ref":"java/java内存空间和内存回收算法.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"java/java线程间数据共享.md","mtime":"2024-07-12T02:30:57.425Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-07-12T11:23:21.120Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

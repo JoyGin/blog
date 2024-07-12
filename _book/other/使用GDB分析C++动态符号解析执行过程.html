@@ -1,0 +1,1206 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>使用GDB分析C++动态符号解析执行过程 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="linux安装ffmpeg.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../android/android.html">
+            
+                <a href="../android/android.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../android/第一个view的measureSpec是如何生成的.html">
+            
+                <a href="../android/第一个view的measureSpec是如何生成的.html">
+            
+                    
+                    第一个view的measureSpec是如何生成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../android/添加so文件.html">
+            
+                <a href="../android/添加so文件.html">
+            
+                    
+                    添加so文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../android/android使用protobuf.html">
+            
+                <a href="../android/android使用protobuf.html">
+            
+                    
+                    android使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../android/android通过gradle使用protobuf.html">
+            
+                <a href="../android/android通过gradle使用protobuf.html">
+            
+                    
+                    android通过gradle使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../android/android插件化代理实现.html">
+            
+                <a href="../android/android插件化代理实现.html">
+            
+                    
+                    android插件化代理实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../android/android插件化Hook实现.html">
+            
+                <a href="../android/android插件化Hook实现.html">
+            
+                    
+                    android插件化Hook实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                <a href="../android/Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                    
+                    Make、Makefile、CMake和CMakeLists.txt之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                <a href="../android/Android.mk和CmakeLists.txt区别.html">
+            
+                    
+                    Android.mk和CmakeLists.txt区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="../android/Android.mk和Application.mk.html">
+            
+                <a href="../android/Android.mk和Application.mk.html">
+            
+                    
+                    Android.mk和Application.mk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="../android/Android_NDK下Cmake的构建过程.html">
+            
+                <a href="../android/Android_NDK下Cmake的构建过程.html">
+            
+                    
+                    Android NDK 下 Cmake 的构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="../android/AccessibilityService.html">
+            
+                <a href="../android/AccessibilityService.html">
+            
+                    
+                    AccessibilityService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ios/ios.html">
+            
+                <a href="../ios/ios.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ios/iOS_crash分析.html">
+            
+                <a href="../ios/iOS_crash分析.html">
+            
+                    
+                    iOS crash分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c_c++/c_c++.html">
+            
+                <a href="../c_c++/c_c++.html">
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../c_c++/clang和gcc.html">
+            
+                <a href="../c_c++/clang和gcc.html">
+            
+                    
+                    clang和gcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../c_c++/cmakeList.html">
+            
+                <a href="../c_c++/cmakeList.html">
+            
+                    
+                    cmakeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../c_c++/fork创建子进程.html">
+            
+                <a href="../c_c++/fork创建子进程.html">
+            
+                    
+                    fork()创建子进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../c_c++/vscode_C++开发配置.html">
+            
+                <a href="../c_c++/vscode_C++开发配置.html">
+            
+                    
+                    vscode C++开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../frontend/frontend.html">
+            
+                <a href="../frontend/frontend.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../frontend/ES6的模块化语法.html">
+            
+                <a href="../frontend/ES6的模块化语法.html">
+            
+                    
+                    ES6的模块化语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../frontend/javascript模块化历程.html">
+            
+                <a href="../frontend/javascript模块化历程.html">
+            
+                    
+                    javascript模块化历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../frontend/npm常用命令.html">
+            
+                <a href="../frontend/npm常用命令.html">
+            
+                    
+                    npm常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../go/go.html">
+            
+                <a href="../go/go.html">
+            
+                    
+                    GO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../go/GOPATH和GOROOT.html">
+            
+                <a href="../go/GOPATH和GOROOT.html">
+            
+                    
+                    GOPATH 和 GOROOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../java/java.html">
+            
+                <a href="../java/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../java/java内存空间和内存回收算法.html">
+            
+                <a href="../java/java内存空间和内存回收算法.html">
+            
+                    
+                    java内存空间和内存回收算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../java/java线程间数据共享.html">
+            
+                <a href="../java/java线程间数据共享.html">
+            
+                    
+                    java线程间数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../java/ServiceLoader使用.html">
+            
+                <a href="../java/ServiceLoader使用.html">
+            
+                    
+                    ServiceLoader使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../java/虚引用.html">
+            
+                <a href="../java/虚引用.html">
+            
+                    
+                    虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../network/network.html">
+            
+                <a href="../network/network.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../network/vpn.html">
+            
+                <a href="../network/vpn.html">
+            
+                    
+                    vpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../os/os.html">
+            
+                <a href="../os/os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../os/epoll.html">
+            
+                <a href="../os/epoll.html">
+            
+                    
+                    epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../gist/gist.html">
+            
+                <a href="../gist/gist.html">
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../gist/android/android.html">
+            
+                <a href="../gist/android/android.html">
+            
+                    
+                    Android代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1.1" data-path="../gist/android/实现悬浮窗功能.html">
+            
+                <a href="../gist/android/实现悬浮窗功能.html">
+            
+                    
+                    实现悬浮窗功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.2" data-path="../gist/android/将某个activity提到最前.html">
+            
+                <a href="../gist/android/将某个activity提到最前.html">
+            
+                    
+                    将某个activity提到最前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.3" data-path="../gist/android/获取webView日志.html">
+            
+                <a href="../gist/android/获取webView日志.html">
+            
+                    
+                    获取webView日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.4" data-path="../gist/android/获取状态栏高度.html">
+            
+                <a href="../gist/android/获取状态栏高度.html">
+            
+                    
+                    获取状态栏高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.5" data-path="../gist/android/让应用不出现在最近应用中.html">
+            
+                <a href="../gist/android/让应用不出现在最近应用中.html">
+            
+                    
+                    让应用不出现在最近应用中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.6" data-path="../gist/android/请求悬浮窗权限.html">
+            
+                <a href="../gist/android/请求悬浮窗权限.html">
+            
+                    
+                    请求悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.7" data-path="../gist/android/通过应用包名打开应用.html">
+            
+                <a href="../gist/android/通过应用包名打开应用.html">
+            
+                    
+                    通过应用包名打开应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../gist/flutter/flutter.html">
+            
+                <a href="../gist/flutter/flutter.html">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.2.1" data-path="../gist/flutter/flutter异步加载组件.html">
+            
+                <a href="../gist/flutter/flutter异步加载组件.html">
+            
+                    
+                    flutter异步加载组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.2" data-path="../gist/flutter/获取图片高度.html">
+            
+                <a href="../gist/flutter/获取图片高度.html">
+            
+                    
+                    获取图片高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.3" data-path="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                <a href="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                    
+                    解决按英文单词自动换行的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../gist/js/js.html">
+            
+                <a href="../gist/js/js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.3.1" data-path="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                <a href="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                    
+                    判断当前是企飞钉浏览环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="other.html">
+            
+                <a href="other.html">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="hexdump使用.html">
+            
+                <a href="hexdump使用.html">
+            
+                    
+                    hexdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="objdump使用.html">
+            
+                <a href="objdump使用.html">
+            
+                    
+                    objdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="linux安装ffmpeg.html">
+            
+                <a href="linux安装ffmpeg.html">
+            
+                    
+                    linux安装ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="11.1.4" data-path="使用GDB分析C++动态符号解析执行过程.html">
+            
+                <a href="使用GDB分析C++动态符号解析执行过程.html">
+            
+                    
+                    使用GDB分析C++动态符号解析执行过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >使用GDB分析C++动态符号解析执行过程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="使用-gdb-分析-c-动态符号解析执行过程">使用 GDB 分析 C++ 动态符号解析执行过程</h1>
+<p>在动态链接时，动态链接库的代码和数据不会被复制到可执行文件中，而是在程序加载的时候进行复制，并做动态链接，使得原来的可执行文件能够对其中定义的符号正常引用。而为了减少程序启动时的开销，C++ 动态链接库使用了懒加载的方式，本文基于GDB调试简单分析了一下这个懒加载的过程，即C++动态链接库符号的动态解析的过程。</p>
+<h2 id="1-基础知识">1. 基础知识</h2>
+<h3 id="11-可执行文件相关：">1.1 可执行文件相关：</h3>
+<ol>
+<li>ELF文件：ELF 全称 “Executable and Linkable Format”，即可执行可链接文件格式，目前常见的Linux可执行文件、共享库（.so）、目标文件（ .o）均为此格式。</li>
+<li>objdump： 对包含机器指令的段进行反汇编的。反汇编是将二进制代码转换为汇编语言的过程，可以帮助分析和理解目标文件或可执行文件的功能和结构。</li>
+<li>.plt（过程链接表）：存储了跳转到外部函数的指令，每个指令对应一个.got.plt表项。第一次调用外部函数时，会通过.plt跳转到动态链接器的解析函数，解析出外部函数的真实地址，并填充到.got.plt表中。之后再调用外部函数时，就直接跳转到.got.plt表中的地址。</li>
+<li>.got.plt（过程链接表的全局偏移表）：存储了外部函数的地址，每个函数对应一个.got.plt表项。与.plt表相对应，.plt表中的指令会跳转到.got.plt表中的地址。在程序加载时，.got.plt表中的地址会被初始化为.plt表中的解析函数地址，在第一次调用外部函数时，会被替换为真实的函数地址。</li>
+</ol>
+<h3 id="12-gdb相关：">1.2 gdb相关：</h3>
+<ol>
+<li>disassemble xxx(函数名)/yyy(内存地址)： 这条命令作用是输出xxx/yyy的反汇编代码。</li>
+<li>r： run的简写，作用是运行需要调试的程序。</li>
+<li>x : examine的简写，用法为：x/nfu addr，作用是查看内存地址为addr里存放的值。其中，n表示列举出从addr开始的n个单位的内容；f表示输出格式(比如x表示将结果显示成十六进制)。u表示单位(w表示四字节，g表示八字节)。</li>
+<li>b：break的简写，作用是设置断点。b后面需要接“函数名”或者“文件+行号”。如果只能看到地址，可以直接使用b *addr，根据运行时的地址设置断点。</li>
+<li>c: continue的简写，一般用于从断点处继续执行。</li>
+</ol>
+<h2 id="2-准备工作">2. 准备工作</h2>
+<p>在调试之前，我们先看下测试代码和ELF中的got表和plt表信息，便于在后续的调试过程中查看。</p>
+<h3 id="21-测试代码">2.1 测试代码</h3>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span>
+{
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello, world\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="22-plt表">2.2 plt表</h3>
+<pre><code class="lang-sh">root@b7344a5e20bb <span class="hljs-built_in">test</span> $ g++ -g main.cc -o main
+root@b7344a5e20bb <span class="hljs-built_in">test</span> $ objdump -d -j .plt main
+
+main:     file format elf64-x86-64
+
+Disassembly of section .plt:
+
+0000000000400490 &lt;__gmon_start__@plt-0x10&gt;:
+  400490:       ff 35 72 0b 20 00       pushq  0x200b72(%rip)        <span class="hljs-comment"># 601008 &lt;_GLOBAL_OFFSET_TABLE_+0x8&gt;</span>
+  400496:       ff 25 74 0b 20 00       jmpq   *0x200b74(%rip)        <span class="hljs-comment"># 601010 &lt;_GLOBAL_OFFSET_TABLE_+0x10&gt;</span>
+  40049c:       0f 1f 40 00             nopl   0x0(%rax)
+
+00000000004004a0 &lt;__gmon_start__@plt&gt;:
+  4004a0:       ff 25 72 0b 20 00       jmpq   *0x200b72(%rip)        <span class="hljs-comment"># 601018 &lt;_GLOBAL_OFFSET_TABLE_+0x18&gt;</span>
+  4004a6:       68 00 00 00 00          pushq  <span class="hljs-variable">$0x0</span>
+  4004ab:       e9 e0 ff ff ff          jmpq   400490 &lt;_init+0x20&gt;
+
+00000000004004b0 &lt;puts@plt&gt;:
+  4004b0:       ff 25 6a 0b 20 00       jmpq   *0x200b6a(%rip)        <span class="hljs-comment"># 601020 &lt;_GLOBAL_OFFSET_TABLE_+0x20&gt;</span>
+  4004b6:       68 01 00 00 00          pushq  <span class="hljs-variable">$0x1</span>
+  4004bb:       e9 d0 ff ff ff          jmpq   400490 &lt;_init+0x20&gt;
+
+00000000004004c0 &lt;__libc_start_main@plt&gt;:
+  4004c0:       ff 25 62 0b 20 00       jmpq   *0x200b62(%rip)        <span class="hljs-comment"># 601028 &lt;_GLOBAL_OFFSET_TABLE_+0x28&gt;</span>
+  4004c6:       68 02 00 00 00          pushq  <span class="hljs-variable">$0x2</span>
+  4004cb:       e9 c0 ff ff ff          jmpq   400490 &lt;_init+0x20&gt;
+</code></pre>
+<h3 id="23-got表">2.3 got表</h3>
+<pre><code class="lang-sh">root@b7344a5e20bb <span class="hljs-built_in">test</span> $ objdump -R -j .got main
+
+main:     file format elf64-x86-64
+
+DYNAMIC RELOCATION RECORDS
+OFFSET           TYPE              VALUE 
+0000000000600ff8 R_X86_64_GLOB_DAT  __gmon_start__
+0000000000601018 R_X86_64_JUMP_SLOT  __gmon_start__
+0000000000601020 R_X86_64_JUMP_SLOT  puts
+0000000000601028 R_X86_64_JUMP_SLOT  __libc_start_main
+</code></pre>
+<h2 id="3-调试过程">3. 调试过程</h2>
+<h3 id="31-进入调试">3.1 进入调试</h3>
+<p>首先，进入gdb调试模式，</p>
+<p><img src="../pics/gdb-1.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<h3 id="32-查看plt表中的指令">3.2 查看plt表中的指令</h3>
+<p>反汇编main函数，可以发现执行print函数实际上会执行0x4004b0处的指令（通过2.2节看，实际上是plt表的第三项，即plt[2]），我们在此处设置断点，然后继续执行，</p>
+<p><img src="../pics/gdb-2.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<h3 id="33-查看外部函数执行前，got表中存放的指令地址">3.3 查看外部函数执行前，got表中存放的指令地址</h3>
+<p>可以看到0x4004b0的代码实际上包含三个步骤，执行跳转执行got[2]处的指令，压栈1，跳转执行0x400490 （即plt[0]）。我们首先看下0x601020指向的值为0x4004b6,也就是0x4004b0的下一条命令，</p>
+<p><img src="../pics/gdb-3.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<p>继续执行，会压栈0x1，然后跳转到0x400490（即plt[0]）处执行，0x400490的汇编代码如下：</p>
+<p><img src="../pics/gdb-4.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<h3 id="34-动态解析过程">3.4 动态解析过程</h3>
+<p>首先会执行一次压栈操作，然后从0x601010 处读取8字节数据作为跳转地址执行，打印一下实际的跳转地址和相应的汇编代码，</p>
+<p><img src="../pics/gdb-5.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<p><img src="../pics/gdb-6.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<p>这段代码比较长，实现比较复杂，_dl_runtime_resolve_xsavec的功能主要是获取外部库函数的真实地址，并填充到got表中，传递的$rsi和$rdi表示got表的地址和相应函数在表中的偏移。为了验证这个过程，在main函数末尾打个断点，继续执行，</p>
+<h3 id="35-解析完成后got表中存放的指令地址">3.5 解析完成后got表中存放的指令地址</h3>
+<p><img src="../pics/gdb-7.png" alt style="display: block; margin: auto;" height="100%" width="100%"><br></p>
+<p>执行完后发现0x601010 处的值已经变成了 0x00007ffff71d9740 也就是print函数的实际位置，后续的代码就会直接执行print函数而不会再次解析。</p>
+<h2 id="4-总结">4. 总结</h2>
+<p>为了实现“动态”的效果，可执行文件访问外部库函数实际上会通过plt这个跳板代码访问，整个过程采用懒加载的方式，第一次执行时，plt代码从got表的指令实际是执行下一行命令（类似于一个查缓存的操作，如果缓存不存在，就继续往下执行写缓存），后续的代码会解析外部库函数的实际地址，然后填充到got表中，这样外部函数地址便有了一个缓存，后续再执行时，plt就会直接获取外部函数库的地址进行跳转，不用再次解析。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="linux安装ffmpeg.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: linux安装ffmpeg">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"使用GDB分析C++动态符号解析执行过程","level":"11.1.4","depth":2,"previous":{"title":"linux安装ffmpeg","level":"11.1.3","depth":2,"path":"other/linux安装ffmpeg.md","ref":"other/linux安装ffmpeg.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"other/使用GDB分析C++动态符号解析执行过程.md","mtime":"2024-07-12T02:30:57.427Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-07-12T11:23:21.120Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

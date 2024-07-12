@@ -1,0 +1,1494 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>android插件化Hook实现 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.4">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Make、Makefile、CMake和CMakeLists.txt之间的关系.html" />
+    
+    
+    <link rel="prev" href="android插件化代理实现.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="android.html">
+            
+                <a href="android.html">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="第一个view的measureSpec是如何生成的.html">
+            
+                <a href="第一个view的measureSpec是如何生成的.html">
+            
+                    
+                    第一个view的measureSpec是如何生成的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="添加so文件.html">
+            
+                <a href="添加so文件.html">
+            
+                    
+                    添加so文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="android使用protobuf.html">
+            
+                <a href="android使用protobuf.html">
+            
+                    
+                    android使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="android通过gradle使用protobuf.html">
+            
+                <a href="android通过gradle使用protobuf.html">
+            
+                    
+                    android通过gradle使用protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="android插件化代理实现.html">
+            
+                <a href="android插件化代理实现.html">
+            
+                    
+                    android插件化代理实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.6" data-path="android插件化Hook实现.html">
+            
+                <a href="android插件化Hook实现.html">
+            
+                    
+                    android插件化Hook实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                <a href="Make、Makefile、CMake和CMakeLists.txt之间的关系.html">
+            
+                    
+                    Make、Makefile、CMake和CMakeLists.txt之间的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="Android.mk和CmakeLists.txt区别.html">
+            
+                <a href="Android.mk和CmakeLists.txt区别.html">
+            
+                    
+                    Android.mk和CmakeLists.txt区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="Android.mk和Application.mk.html">
+            
+                <a href="Android.mk和Application.mk.html">
+            
+                    
+                    Android.mk和Application.mk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="Android_NDK下Cmake的构建过程.html">
+            
+                <a href="Android_NDK下Cmake的构建过程.html">
+            
+                    
+                    Android NDK 下 Cmake 的构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="AccessibilityService.html">
+            
+                <a href="AccessibilityService.html">
+            
+                    
+                    AccessibilityService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../ios/ios.html">
+            
+                <a href="../ios/ios.html">
+            
+                    
+                    iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../ios/iOS_crash分析.html">
+            
+                <a href="../ios/iOS_crash分析.html">
+            
+                    
+                    iOS crash分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../c_c++/c_c++.html">
+            
+                <a href="../c_c++/c_c++.html">
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../c_c++/clang和gcc.html">
+            
+                <a href="../c_c++/clang和gcc.html">
+            
+                    
+                    clang和gcc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../c_c++/cmakeList.html">
+            
+                <a href="../c_c++/cmakeList.html">
+            
+                    
+                    cmakeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../c_c++/fork创建子进程.html">
+            
+                <a href="../c_c++/fork创建子进程.html">
+            
+                    
+                    fork()创建子进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../c_c++/vscode_C++开发配置.html">
+            
+                <a href="../c_c++/vscode_C++开发配置.html">
+            
+                    
+                    vscode C++开发配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../frontend/frontend.html">
+            
+                <a href="../frontend/frontend.html">
+            
+                    
+                    前端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../frontend/ES6的模块化语法.html">
+            
+                <a href="../frontend/ES6的模块化语法.html">
+            
+                    
+                    ES6的模块化语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.2" data-path="../frontend/javascript模块化历程.html">
+            
+                <a href="../frontend/javascript模块化历程.html">
+            
+                    
+                    javascript模块化历程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.3" data-path="../frontend/npm常用命令.html">
+            
+                <a href="../frontend/npm常用命令.html">
+            
+                    
+                    npm常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../go/go.html">
+            
+                <a href="../go/go.html">
+            
+                    
+                    GO
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../go/GOPATH和GOROOT.html">
+            
+                <a href="../go/GOPATH和GOROOT.html">
+            
+                    
+                    GOPATH 和 GOROOT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../java/java.html">
+            
+                <a href="../java/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../java/java内存空间和内存回收算法.html">
+            
+                <a href="../java/java内存空间和内存回收算法.html">
+            
+                    
+                    java内存空间和内存回收算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../java/java线程间数据共享.html">
+            
+                <a href="../java/java线程间数据共享.html">
+            
+                    
+                    java线程间数据共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../java/ServiceLoader使用.html">
+            
+                <a href="../java/ServiceLoader使用.html">
+            
+                    
+                    ServiceLoader使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.4" data-path="../java/虚引用.html">
+            
+                <a href="../java/虚引用.html">
+            
+                    
+                    虚引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../network/network.html">
+            
+                <a href="../network/network.html">
+            
+                    
+                    计算机网络
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="8.1.1" data-path="../network/vpn.html">
+            
+                <a href="../network/vpn.html">
+            
+                    
+                    vpn
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../os/os.html">
+            
+                <a href="../os/os.html">
+            
+                    
+                    操作系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="9.1.1" data-path="../os/epoll.html">
+            
+                <a href="../os/epoll.html">
+            
+                    
+                    epoll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../gist/gist.html">
+            
+                <a href="../gist/gist.html">
+            
+                    
+                    代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../gist/android/android.html">
+            
+                <a href="../gist/android/android.html">
+            
+                    
+                    Android代码片段
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1.1" data-path="../gist/android/实现悬浮窗功能.html">
+            
+                <a href="../gist/android/实现悬浮窗功能.html">
+            
+                    
+                    实现悬浮窗功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.2" data-path="../gist/android/将某个activity提到最前.html">
+            
+                <a href="../gist/android/将某个activity提到最前.html">
+            
+                    
+                    将某个activity提到最前
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.3" data-path="../gist/android/获取webView日志.html">
+            
+                <a href="../gist/android/获取webView日志.html">
+            
+                    
+                    获取webView日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.4" data-path="../gist/android/获取状态栏高度.html">
+            
+                <a href="../gist/android/获取状态栏高度.html">
+            
+                    
+                    获取状态栏高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.5" data-path="../gist/android/让应用不出现在最近应用中.html">
+            
+                <a href="../gist/android/让应用不出现在最近应用中.html">
+            
+                    
+                    让应用不出现在最近应用中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.6" data-path="../gist/android/请求悬浮窗权限.html">
+            
+                <a href="../gist/android/请求悬浮窗权限.html">
+            
+                    
+                    请求悬浮窗权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.1.7" data-path="../gist/android/通过应用包名打开应用.html">
+            
+                <a href="../gist/android/通过应用包名打开应用.html">
+            
+                    
+                    通过应用包名打开应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2" data-path="../gist/flutter/flutter.html">
+            
+                <a href="../gist/flutter/flutter.html">
+            
+                    
+                    flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.2.1" data-path="../gist/flutter/flutter异步加载组件.html">
+            
+                <a href="../gist/flutter/flutter异步加载组件.html">
+            
+                    
+                    flutter异步加载组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.2" data-path="../gist/flutter/获取图片高度.html">
+            
+                <a href="../gist/flutter/获取图片高度.html">
+            
+                    
+                    获取图片高度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.2.3" data-path="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                <a href="../gist/flutter/解决按英文单词自动换行的问题.html">
+            
+                    
+                    解决按英文单词自动换行的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="10.1.3" data-path="../gist/js/js.html">
+            
+                <a href="../gist/js/js.html">
+            
+                    
+                    js
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.3.1" data-path="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                <a href="../gist/js/判断当前是企飞钉浏览环境.html">
+            
+                    
+                    判断当前是企飞钉浏览环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../other/other.html">
+            
+                <a href="../other/other.html">
+            
+                    
+                    其它
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="11.1.1" data-path="../other/hexdump使用.html">
+            
+                <a href="../other/hexdump使用.html">
+            
+                    
+                    hexdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.2" data-path="../other/objdump使用.html">
+            
+                <a href="../other/objdump使用.html">
+            
+                    
+                    objdump使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.3" data-path="../other/linux安装ffmpeg.html">
+            
+                <a href="../other/linux安装ffmpeg.html">
+            
+                    
+                    linux安装ffmpeg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="11.1.4" data-path="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                <a href="../other/使用GDB分析C++动态符号解析执行过程.html">
+            
+                    
+                    使用GDB分析C++动态符号解析执行过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >android插件化Hook实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="android-插件化-hook-实现">Android 插件化 Hook 实现</h4>
+<p>Hook的方式需要基本了解系统启动一个Activity的过程，一般来说系统会先检查Activity是否注册，然后再去生成该Activity，那么我们只需要在检查的时候用一个已经注册的Activity（桩，通常表示为StubActivity）来给系统检查，检查通过后在生成的时候再替换成插件的就可以了。</p>
+<h5 id="一、hook-instrumentation">一、hook Instrumentation</h5>
+<p>主要工作：要自己实现一个Instrumentation，hook execStartActivity 和 newActivity，修改 intent 绕过 activity 检查，再复原 intent 创建 activity.</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">HookedInstrumentation</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Instrumentation</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Handler</span>.Callback {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">TAG</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;HookedInstrumentation&quot;</span>;
+    <span class="hljs-keyword">protected</span> Instrumentation mBase;
+    <span class="hljs-keyword">private</span> PluginManager mPluginManager;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-title function_">HookedInstrumentation</span><span class="hljs-params">(Instrumentation base, PluginManager pluginManager)</span> {
+        mBase = base;
+        mPluginManager = pluginManager;
+    }
+
+    <span class="hljs-comment">/**
+     * 覆盖掉原始Instrumentation类的对应方法,用于插件内部跳转Activity时适配
+     *
+     * <span class="hljs-doctag">@Override</span>
+     */</span>
+    <span class="hljs-keyword">public</span> ActivityResult <span class="hljs-title function_">execStartActivity</span><span class="hljs-params">(
+            Context who, IBinder contextThread, IBinder token, Activity target,
+            Intent intent, <span class="hljs-type">int</span> requestCode, Bundle options)</span> {
+
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;execStartActivity&quot;</span>);
+        mPluginManager.hookToStubActivity(intent);
+
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-type">Method</span> <span class="hljs-variable">execStartActivity</span> <span class="hljs-operator">=</span> Instrumentation.class.getDeclaredMethod(
+                    <span class="hljs-string">&quot;execStartActivity&quot;</span>, Context.class, IBinder.class, IBinder.class,
+                    Activity.class, Intent.class, <span class="hljs-type">int</span>.class, Bundle.class);
+            execStartActivity.setAccessible(<span class="hljs-literal">true</span>);
+            <span class="hljs-keyword">return</span> (ActivityResult) execStartActivity.invoke(mBase, who,
+                    contextThread, token, target, intent, requestCode, options);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;do not support!!!&quot;</span> + e.getMessage());
+        }
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> Activity <span class="hljs-title function_">newActivity</span><span class="hljs-params">(ClassLoader cl, String className, Intent intent)</span> <span class="hljs-keyword">throws</span> InstantiationException, IllegalAccessException, ClassNotFoundException {
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;newActivity&quot;</span>);
+
+        <span class="hljs-keyword">if</span> (mPluginManager.hookToPluginActivity(intent)) {
+            <span class="hljs-type">String</span> <span class="hljs-variable">targetClassName</span> <span class="hljs-operator">=</span> intent.getComponent().getClassName();
+            <span class="hljs-type">PluginApp</span> <span class="hljs-variable">pluginApp</span> <span class="hljs-operator">=</span> mPluginManager.getLoadedPluginApk();
+            <span class="hljs-type">Activity</span> <span class="hljs-variable">activity</span> <span class="hljs-operator">=</span> mBase.newActivity(pluginApp.mClassLoader, targetClassName, intent);
+            activity.setIntent(intent);
+            ReflectUtil.setField(ContextThemeWrapper.class, activity, Constants.FIELD_RESOURCES, pluginApp.mResources);
+            <span class="hljs-keyword">return</span> activity;
+        }
+
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;super.newActivity(...)&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">super</span>.newActivity(cl, className, intent);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">handleMessage</span><span class="hljs-params">(Message message)</span> {
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;handleMessage&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">callActivityOnCreate</span><span class="hljs-params">(Activity activity, Bundle icicle)</span> {
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;callActivityOnCreate&quot;</span>);
+        <span class="hljs-built_in">super</span>.callActivityOnCreate(activity, icicle);
+    }
+}
+在负责启动的execStartActivity设置为启动已注册的Activity，再在newActivity设置为实际要启动的插件的Activity。然后去Hook系统持有的该字段：
+
+<span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ReflectUtil</span> {
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">METHOD_currentActivityThread</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;currentActivityThread&quot;</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">CLASS_ActivityThread</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;android.app.ActivityThread&quot;</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">FIELD_mInstrumentation</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;mInstrumentation&quot;</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">TAG</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;ReflectUtil&quot;</span>;
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Instrumentation sInstrumentation;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Instrumentation sActivityInstrumentation;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Field sActivityThreadInstrumentationField;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Field sActivityInstrumentationField;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Object sActivityThread;
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">init</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">//获取当前的ActivityThread对象</span>
+        Class&lt;?&gt; activityThreadClass = <span class="hljs-literal">null</span>;
+        <span class="hljs-keyword">try</span> {
+            activityThreadClass = Class.forName(CLASS_ActivityThread);
+            <span class="hljs-type">Method</span> <span class="hljs-variable">currentActivityThreadMethod</span> <span class="hljs-operator">=</span> activityThreadClass.getDeclaredMethod(METHOD_currentActivityThread);
+            currentActivityThreadMethod.setAccessible(<span class="hljs-literal">true</span>);
+            <span class="hljs-type">Object</span> <span class="hljs-variable">currentActivityThread</span> <span class="hljs-operator">=</span> currentActivityThreadMethod.invoke(<span class="hljs-literal">null</span>);
+
+
+            <span class="hljs-comment">//拿到在ActivityThread类里面的原始mInstrumentation对象</span>
+            <span class="hljs-type">Field</span> <span class="hljs-variable">instrumentationField</span> <span class="hljs-operator">=</span> activityThreadClass.getDeclaredField(FIELD_mInstrumentation);
+            instrumentationField.setAccessible(<span class="hljs-literal">true</span>);
+            sActivityThreadInstrumentationField = instrumentationField;
+
+            sInstrumentation = (Instrumentation) instrumentationField.get(currentActivityThread);
+            sActivityThread = currentActivityThread;
+
+
+            sActivityInstrumentationField =  Activity.class.getDeclaredField(FIELD_mInstrumentation);
+            sActivityInstrumentationField.setAccessible(<span class="hljs-literal">true</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">catch</span> (ClassNotFoundException
+                | NoSuchMethodException
+                | IllegalAccessException
+                | InvocationTargetException
+                | NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Instrumentation <span class="hljs-title function_">getInstrumentation</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">return</span> sInstrumentation;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Object <span class="hljs-title function_">getActivityThread</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">return</span> sActivityThread;
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setInstrumentation</span><span class="hljs-params">(Object activityThread, HookedInstrumentation hookedInstrumentation)</span> {
+        <span class="hljs-keyword">try</span> {
+            sActivityThreadInstrumentationField.set(activityThread, hookedInstrumentation);
+            <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;set hooked instrumentation&quot;</span>);
+        } <span class="hljs-keyword">catch</span> (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setActivityInstrumentation</span><span class="hljs-params">(Activity activity, PluginManager manager)</span> {
+        <span class="hljs-keyword">try</span> {
+            sActivityInstrumentation = (Instrumentation) sActivityInstrumentationField.get(activity);
+            <span class="hljs-type">HookedInstrumentation</span> <span class="hljs-variable">instrumentation</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">HookedInstrumentation</span>(sActivityInstrumentation, manager);
+            sActivityInstrumentationField.set(activity, instrumentation);
+            <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;set activity hooked instrumentation&quot;</span>);
+        } <span class="hljs-keyword">catch</span> (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setField</span><span class="hljs-params">(Class clazz, Object target, String field, Object object)</span> {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-type">Field</span> <span class="hljs-variable">f</span> <span class="hljs-operator">=</span> clazz.getDeclaredField(field);
+            f.setAccessible(<span class="hljs-literal">true</span>);
+            f.set(target, object);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}
+</code></pre>
+<h5 id="二、实现-pluginmanager">二、实现 PluginManager</h5>
+<p>PluginManager同样负责加载插件的类和资源等。</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PluginManager</span> {
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-type">String</span> <span class="hljs-variable">TAG</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;PluginManager&quot;</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> PluginManager sInstance;
+    <span class="hljs-keyword">private</span> Context mContext;
+    <span class="hljs-keyword">private</span> PluginApp mPluginApp;
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> PluginManager <span class="hljs-title function_">getInstance</span><span class="hljs-params">(Context context)</span> {
+        <span class="hljs-keyword">if</span> (sInstance == <span class="hljs-literal">null</span> &amp;&amp; context != <span class="hljs-literal">null</span>) {
+            sInstance = <span class="hljs-keyword">new</span> <span class="hljs-title class_">PluginManager</span>(context);
+        }
+        <span class="hljs-keyword">return</span> sInstance;
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-title function_">PluginManager</span><span class="hljs-params">(Context context)</span> {
+        mContext = context;
+    }
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">hookInstrumentation</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-type">Instrumentation</span> <span class="hljs-variable">baseInstrumentation</span> <span class="hljs-operator">=</span> ReflectUtil.getInstrumentation();
+
+            <span class="hljs-keyword">final</span> <span class="hljs-type">HookedInstrumentation</span> <span class="hljs-variable">instrumentation</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">HookedInstrumentation</span>(baseInstrumentation, <span class="hljs-built_in">this</span>);
+
+            <span class="hljs-type">Object</span> <span class="hljs-variable">activityThread</span> <span class="hljs-operator">=</span> ReflectUtil.getActivityThread();
+            ReflectUtil.setInstrumentation(activityThread, instrumentation);
+        } <span class="hljs-keyword">catch</span> (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">hookCurrentActivityInstrumentation</span><span class="hljs-params">(Activity activity)</span> {
+        ReflectUtil.setActivityInstrumentation(activity, sInstance);
+    }
+
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">hookToStubActivity</span><span class="hljs-params">(Intent intent)</span> {
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;hookToStubActivity&quot;</span>);
+
+        <span class="hljs-keyword">if</span> (intent == <span class="hljs-literal">null</span> || intent.getComponent() == <span class="hljs-literal">null</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-type">String</span> <span class="hljs-variable">targetPackageName</span> <span class="hljs-operator">=</span> intent.getComponent().getPackageName();
+        <span class="hljs-type">String</span> <span class="hljs-variable">targetClassName</span> <span class="hljs-operator">=</span> intent.getComponent().getClassName();
+
+        <span class="hljs-keyword">if</span> (mContext != <span class="hljs-literal">null</span>
+                &amp;&amp; !mContext.getPackageName().equals(targetPackageName)
+                &amp;&amp; isPluginLoaded(targetPackageName)) {
+            <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;hook &quot;</span> +  targetClassName + <span class="hljs-string">&quot; to &quot;</span> + Constants.STUB_ACTIVITY);
+
+            intent.setClassName(Constants.STUB_PACKAGE, Constants.STUB_ACTIVITY);
+            intent.putExtra(Constants.KEY_IS_PLUGIN, <span class="hljs-literal">true</span>);
+            intent.putExtra(Constants.KEY_PACKAGE, targetPackageName);
+            intent.putExtra(Constants.KEY_ACTIVITY, targetClassName);
+        }
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">hookToPluginActivity</span><span class="hljs-params">(Intent intent)</span> {
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;hookToPluginActivity&quot;</span>);
+        <span class="hljs-keyword">if</span> (intent.getBooleanExtra(Constants.KEY_IS_PLUGIN, <span class="hljs-literal">false</span>)) {
+            <span class="hljs-type">String</span> <span class="hljs-variable">pkg</span> <span class="hljs-operator">=</span> intent.getStringExtra(Constants.KEY_PACKAGE);
+            <span class="hljs-type">String</span> <span class="hljs-variable">activity</span> <span class="hljs-operator">=</span> intent.getStringExtra(Constants.KEY_ACTIVITY);
+            <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;hook &quot;</span> + intent.getComponent().getClassName() + <span class="hljs-string">&quot; to &quot;</span> + activity);
+            intent.setClassName(pkg, activity);
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isPluginLoaded</span><span class="hljs-params">(String packageName)</span> {
+        <span class="hljs-comment">// TODO 检查packageNmae是否匹配</span>
+        <span class="hljs-keyword">return</span> mPluginApp != <span class="hljs-literal">null</span>;
+    }
+
+
+
+    <span class="hljs-keyword">public</span> PluginApp <span class="hljs-title function_">loadPluginApk</span><span class="hljs-params">(String apkPath)</span> {
+        <span class="hljs-type">String</span> <span class="hljs-variable">addAssetPathMethod</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;addAssetPath&quot;</span>;
+        <span class="hljs-type">PluginApp</span> <span class="hljs-variable">pluginApp</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;
+        <span class="hljs-keyword">try</span> {
+            <span class="hljs-type">AssetManager</span> <span class="hljs-variable">assetManager</span> <span class="hljs-operator">=</span> AssetManager.class.newInstance();
+            <span class="hljs-type">Method</span> <span class="hljs-variable">addAssetPath</span> <span class="hljs-operator">=</span> assetManager.getClass().getMethod(addAssetPathMethod, String.class);
+            addAssetPath.invoke(assetManager, apkPath);
+            <span class="hljs-type">Resources</span> <span class="hljs-variable">pluginRes</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Resources</span>(assetManager,
+                    mContext.getResources().getDisplayMetrics(),
+                    mContext.getResources().getConfiguration());
+            pluginApp = <span class="hljs-keyword">new</span> <span class="hljs-title class_">PluginApp</span>(pluginRes);
+            pluginApp.mClassLoader = createDexClassLoader(apkPath);
+        } <span class="hljs-keyword">catch</span> (IllegalAccessException
+                | InstantiationException
+                | NoSuchMethodException
+                | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        <span class="hljs-keyword">return</span> pluginApp;
+    }
+
+    <span class="hljs-keyword">private</span> DexClassLoader <span class="hljs-title function_">createDexClassLoader</span><span class="hljs-params">(String apkPath)</span> {
+        <span class="hljs-type">File</span> <span class="hljs-variable">dexOutputDir</span> <span class="hljs-operator">=</span> mContext.getDir(<span class="hljs-string">&quot;dex&quot;</span>, Context.MODE_PRIVATE);
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">DexClassLoader</span>(apkPath, dexOutputDir.getAbsolutePath(),
+                <span class="hljs-literal">null</span>, mContext.getClassLoader());
+
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">loadPlugin</span><span class="hljs-params">(String apkPath)</span> {
+        <span class="hljs-type">File</span> <span class="hljs-variable">apk</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(apkPath);
+        <span class="hljs-keyword">if</span> (!apk.exists()) {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+        }
+        mPluginApp = loadPluginApk(apkPath);
+        <span class="hljs-keyword">return</span> mPluginApp != <span class="hljs-literal">null</span>;
+    }
+
+    <span class="hljs-keyword">public</span> PluginApp <span class="hljs-title function_">getLoadedPluginApk</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">return</span> mPluginApp;
+    }
+}
+</code></pre>
+<h5 id="三、使用">三、使用</h5>
+<p>宿主 app：</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Activity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">View</span>.OnClickListener {
+    <span class="hljs-comment">// https://zhuanlan.zhihu.com/p/33017826</span>
+
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">boolean</span> <span class="hljs-variable">DEBUG</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">TAG</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;MainActivity&quot;</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-type">String</span> <span class="hljs-variable">mPluginPackageName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;top.vimerzhao.image&quot;</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-type">String</span> <span class="hljs-variable">mPluginClassName</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;top.vimerzhao.image.MainActivity&quot;</span>;
+
+    <span class="hljs-comment">//读写权限</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String[] PERMISSIONS_STORAGE = {Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE};
+    <span class="hljs-comment">//请求状态码</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">REQUEST_PERMISSION_CODE</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;
+
+    <span class="hljs-keyword">private</span> PluginManager mPluginManager;
+
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> {
+        <span class="hljs-built_in">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        initData();
+        initView();
+        initPlugin();
+    }
+
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">initPlugin</span><span class="hljs-params">()</span> {
+        <span class="hljs-comment">// !! must first</span>
+        ReflectUtil.init();
+
+        mPluginManager = PluginManager.getInstance(getApplicationContext());
+        mPluginManager.hookInstrumentation();
+        mPluginManager.hookCurrentActivityInstrumentation(<span class="hljs-built_in">this</span>);
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">initData</span><span class="hljs-params">()</span> {
+        <span class="hljs-keyword">if</span> (Build.VERSION.SDK_INT &gt; Build.VERSION_CODES.LOLLIPOP) {
+            <span class="hljs-keyword">if</span> (ActivityCompat.checkSelfPermission(<span class="hljs-built_in">this</span>, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(<span class="hljs-built_in">this</span>, PERMISSIONS_STORAGE, REQUEST_PERMISSION_CODE);
+            }
+        }
+    }
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">initView</span><span class="hljs-params">()</span> {
+        (findViewById(R.id.tv_launch)).setOnClickListener(<span class="hljs-built_in">this</span>);
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">attachBaseContext</span><span class="hljs-params">(Context newBase)</span> {
+        <span class="hljs-built_in">super</span>.attachBaseContext(newBase);
+        <span class="hljs-comment">// !!! 不要在此Hook,看源码发现mInstrumentaion会在此方法后初始化</span>
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onClick</span><span class="hljs-params">(View view)</span> {
+        <span class="hljs-keyword">if</span> (Constants.DEBUG) Log.e(TAG, <span class="hljs-string">&quot;click view id: &quot;</span> + view.getId());
+        <span class="hljs-keyword">if</span> (view.getId() == R.id.tv_launch) {
+            <span class="hljs-comment">// TODO launch plugin app</span>
+            <span class="hljs-keyword">if</span> (mPluginManager.loadPlugin(Constants.PLUGIN_PATH)) {
+                <span class="hljs-type">Intent</span> <span class="hljs-variable">intent</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Intent</span>();
+                intent.setClassName(mPluginPackageName, mPluginClassName);
+                startActivity(intent);
+            }
+        }
+
+    }
+}
+</code></pre>
+<p>插件 app：</p>
+<pre><code class="lang-java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">AppCompatActivity</span> {
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> {
+        <span class="hljs-built_in">super</span>.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+    }
+
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">onResume</span><span class="hljs-params">()</span> {
+        <span class="hljs-built_in">super</span>.onResume();
+
+    }
+}
+</code></pre>
+<h4 id="参考">参考</h4>
+<p><a href="https://zhuanlan.zhihu.com/p/33017826" target="_blank">https://zhuanlan.zhihu.com/p/33017826</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="android插件化代理实现.html" class="navigation navigation-prev " aria-label="Previous page: android插件化代理实现">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Make、Makefile、CMake和CMakeLists.txt之间的关系.html" class="navigation navigation-next " aria-label="Next page: Make、Makefile、CMake和CMakeLists.txt之间的关系">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"android插件化Hook实现","level":"2.1.6","depth":2,"next":{"title":"Make、Makefile、CMake和CMakeLists.txt之间的关系","level":"2.1.7","depth":2,"path":"android/Make、Makefile、CMake和CMakeLists.txt之间的关系.md","ref":"android/Make、Makefile、CMake和CMakeLists.txt之间的关系.md","articles":[]},"previous":{"title":"android插件化代理实现","level":"2.1.5","depth":2,"path":"android/android插件化代理实现.md","ref":"android/android插件化代理实现.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"android/android插件化Hook实现.md","mtime":"2024-02-06T03:49:43.515Z","type":"markdown"},"gitbook":{"version":"5.1.4","time":"2024-07-12T11:23:21.120Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
